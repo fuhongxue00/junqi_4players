@@ -15,6 +15,8 @@ def main():
     ap.add_argument('--ckpt_purple', type=str, default=None)
     ap.add_argument('--ckpt_green', type=str, default=None)
     ap.add_argument('--ckpt_blue', type=str, default=None)
+    ap.add_argument('--ckpt_og_team', type=str, default=None)
+    ap.add_argument('--ckpt_pb_team', type=str, default=None)
     ap.add_argument('--step', action='store_true')
     ap.add_argument('--sleep', type=float, default=0)
     ap.add_argument('--replay_out', type=str, default='replays/ai_vs_ai.json')
@@ -37,7 +39,13 @@ def main():
     if args.ckpt_purple: agents[Player.PURPLE].load(args.ckpt_purple)
     if args.ckpt_green: agents[Player.GREEN].load(args.ckpt_green)
     if args.ckpt_blue: agents[Player.BLUE].load(args.ckpt_blue)
-    
+    if args.ckpt_og_team: 
+        agents[Player.ORANGE].load(args.ckpt_og_team)
+        agents[Player.GREEN].load(args.ckpt_og_team)
+    if args.ckpt_pb_team: 
+        agents[Player.PURPLE].load(args.ckpt_pb_team)
+        agents[Player.BLUE].load(args.ckpt_pb_team)
+
     # 统计信息
     team_wins = {'orange_green': 0, 'purple_blue': 0}
     global_draw = 0

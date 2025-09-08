@@ -60,20 +60,20 @@ class Game:
         
         return True
     
-    def legal_moves(self, player: Player):
-        if self.state.phase != 'play': 
-            return []
-        b = self.state.board
-        moves = []
-        for r in range(BOARD_H):
-            for c in range(BOARD_W):
-                p = b.get((r, c))
-                if p is None or p.owner != player or not p.can_move(): 
-                    continue
-                for nb in b.neighbors((r, c)):
-                    if b.can_move_from_to(player, (r, c), nb):
-                        moves.append(((r, c), nb))
-        return moves
+    # def legal_moves(self, player: Player):
+    #     if self.state.phase != 'play': 
+    #         return []
+    #     b = self.state.board
+    #     moves = []
+    #     for r in range(BOARD_H):
+    #         for c in range(BOARD_W):
+    #             p = b.get((r, c))
+    #             if p is None or p.owner != player or not p.can_move(): 
+    #                 continue
+    #             for nb in b.neighbors((r, c)):
+    #                 if b.can_move_from_to(player, (r, c), nb):
+    #                     moves.append(((r, c), nb))
+    #     return moves
     
     def check_player_elimination(self, player: Player) -> bool:
         """检查玩家是否被淘汰"""
@@ -84,7 +84,7 @@ class Game:
             if p and p.owner == player and p.pid == PieceID.JUNQI:
                 return False  # 军旗还在，未被淘汰
         
-        # 检查是否有可移动的棋子
+        # 检查是否有可移动的棋子,这个逻辑不对，到时候要改一下
         if not board.has_legal_move(player):
             return True  # 无棋可走，被淘汰
         

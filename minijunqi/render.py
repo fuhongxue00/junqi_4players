@@ -58,7 +58,7 @@ def ascii_board(board: Board, viewer: Player, reveal_all: bool=False, is_deploy:
                 elif area == SpecialArea.CAMP:
                     row.append('  CP')
                 elif area == SpecialArea.FORBIDDEN:
-                    row.append('  XX')
+                    row.append('    ')
                 else:
                     row.append('  .')
             elif v == PieceID.UNKNOWN_ENEMY:
@@ -67,7 +67,7 @@ def ascii_board(board: Board, viewer: Player, reveal_all: bool=False, is_deploy:
                 ch = PIECE_SHORT.get(v, '??')
                 p = board.get_piece(viewer, (r, c))
                 if p:
-                    owner_initial = p.owner.name[0]  # 取玩家名字首字母
+                    owner_initial = p.owner.name[:1]  # 取玩家名字首字母
                     row.append(owner_initial + ch)
                 else:
                     row.append(' ' + ch)
@@ -101,12 +101,14 @@ def save_image(board: Board, path: str, viewer: Player, reveal_all: bool=False, 
             y1 = y0 + cell
             
             if area == SpecialArea.HEADQUARTERS:
-                draw.rectangle((x0, y0, x1, y1), fill=(255, 200, 200), outline=(255, 0, 0), width=2)
+                draw.rectangle((x0, y0, x1, y1), fill=(255, 200, 200), outline=(255, 0, 0), width=1)
             elif area == SpecialArea.CAMP:
-                draw.rectangle((x0, y0, x1, y1), fill=(200, 255, 200), outline=(0, 255, 0), width=1)
+                draw.rectangle((x0, y0, x1, y1), fill=(220, 255, 220), outline=(0, 255, 0), width=1)
             elif area == SpecialArea.FORBIDDEN:
-                draw.rectangle((x0, y0, x1, y1), fill=(200, 200, 200), outline=(100, 100, 100), width=1)
-    
+                draw.rectangle((x0, y0, x1, y1), fill=(20, 20, 20), outline=(0, 0, 0), width=1)
+            else:
+                draw.rectangle((x0, y0, x1, y1), fill=(255, 255, 255), outline=(0, 0, 0), width=1)
+
     # 绘制棋子
     obs = board.observe(viewer, reveal_all=reveal_all, hide_enemy_positions=is_deploy and not reveal_all)
     for r in range(BOARD_H):

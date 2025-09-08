@@ -205,7 +205,7 @@ class SharedPolicy:
     def __init__(self, net=None,device='cpu'):
         self.net = PolicyNet().to(device) if net is None else net
         self.device = device
-        self.net.eval()
+        # self.net.eval()
         self._hist: Dict[Player, Deque[torch.Tensor]] = {
             Player.ORANGE: deque(maxlen=HISTORY_STEPS),
             Player.PURPLE: deque(maxlen=HISTORY_STEPS),
@@ -333,7 +333,7 @@ class SharedPolicy:
                 rr, cc = src[0] + dr, src[1] + dc
                 if 0 <= rr < BOARD_H and 0 <= cc < BOARD_W:
                     if board.can_move_from_to(viewer, src, (rr, cc)):
-                        print(f"can_move_from_to: viewer={viewer}, src={src}, (rr, cc)={(rr, cc)}")
+                        # print(f"can_move_from_to: viewer={viewer}, src={src}, (rr, cc)={(rr, cc)}")
                         target_mask[rr, cc] = 1.0
         except Exception:
             target_mask[:] = 1.0

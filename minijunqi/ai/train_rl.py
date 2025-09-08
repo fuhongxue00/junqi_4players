@@ -27,14 +27,14 @@ DIRS = [(-1,0),(1,0),(0,-1),(0,1)]
 #                 if g.state.board.can_place(player, pid, rc):
 #                     g.deploy(player, pid, rc); break
 
-def play_episode(net: PolicyNet):
+def play_episode(net: PolicyNet, device: str):
     traj = []  # (logp, player)
     g = Game(GameConfig())
     
     # 创建四个玩家的Agent
     agents = {}
     for player in PLAYER_ORDER:
-        agents[player] = Agent(net=net)
+        agents[player] = Agent(net=net, device=device)
         agents[player].reset()
     
     # 部署阶段
@@ -94,23 +94,35 @@ def play_episode(net: PolicyNet):
         
         # 行动奖励
         if result == 'attacker':
-            gain += 5
-            gain += 10 * index / len(traj)
+            gain += 50
+            gain += 100 * index / len(traj)
         elif result == 'defender':
-            gain -= 2
+            gain -= 1
         
+        if index < len(traj) - 1:
+            next_result = traj[index + 1][2]
+            if next_result == 'attacker':
+                gain += 50
+            elif next_result == 'defender':
+                gain -= 1
+        
+
+
         returns.append((logp, gain))
     
     return returns
 
 def train(episodes, out, from_ckpt=None,lr_step=2, lr_gamma=0.9):
-    net = PolicyNet()
+    device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+    # device = 'cpu'
+    print('device:',device)
+    net = PolicyNet().to(device)
     if from_ckpt :
         net.load_state_dict(torch.load(from_ckpt)) 
     opt=optim.Adam(net.parameters(), lr=1e-2)
     scheduler = optim.lr_scheduler.StepLR(opt, step_size=lr_step, gamma=lr_gamma)
     for _ in trange(episodes):
-        traj=play_episode(net)
+        traj=play_episode(net, device)
         if not traj: continue
         loss=0.0
         for logp,R in traj:
@@ -126,7 +138,7 @@ def train(episodes, out, from_ckpt=None,lr_step=2, lr_gamma=0.9):
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser()
-    ap.add_argument('--episodes', type=int, default=30)
+    ap.add_argument('--episodes', type=int, default=10)
     ap.add_argument('--out', type=str, default='checkpoints/rl.pt')
     ap.add_argument('--from_ckpt',type=str,default=None)
     args=ap.parse_args()

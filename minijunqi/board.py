@@ -5,7 +5,7 @@ import copy
 from .constants import (
     BOARD_H, BOARD_W, Player, PieceID, STRENGTH, SpecialArea,
     HEADQUARTERS_POSITIONS, DEPLOY_AREA_ROWS, DEPLOY_AREA_COLS,
-    TEAMMATES
+    TEAMMATES, PLAYER_ORDER
 )
 from .pieces import Piece
 
@@ -23,7 +23,21 @@ class Board:
         for player, positions in HEADQUARTERS_POSITIONS.items():
             for r, c in positions:
                 self.special_areas[r][c] = SpecialArea.HEADQUARTERS
-        
+
+
+        for player in PLAYER_ORDER:
+            for r in range(6):
+                for c in range(6):
+                    r_global, c_global = self.rotate_coord_to_global(player, (r, c))
+                    self.special_areas[r_global][c_global] = SpecialArea.FORBIDDEN
+            r = 7
+            for c in range(6,11):
+                r_global, c_global = self.rotate_coord_to_global(player, (r, c))
+                self.special_areas[r_global][c_global] = SpecialArea.FORBIDDEN
+
+            for r,c in [(12,7), (12,9),(13,8),(14,7),(14,9)]:
+                r_global, c_global = self.rotate_coord_to_global(player, (r, c))
+                self.special_areas[r_global][c_global] = SpecialArea.CAMP
         # TODO: 行营和禁入区的位置需要后续配置
         # 目前先预留，后续可以根据需要添加具体位置
     
@@ -91,6 +105,8 @@ class Board:
             return False
         if self.is_forbidden(global_rc): 
             return False
+        if self.is_camp(global_rc): 
+            return False
         
         # 检查是否在可部署区域内（玩家视角）
         if not self.is_in_deploy_area(player, rc):
@@ -107,7 +123,7 @@ class Board:
             print(f"失败place: player={player}, pid={pid}, rc={rc}, can_place=False")
             return False
         # 使用玩家视角的set方法
-        print(f"place: player={player}, pid={pid}, rc={rc}")
+        # print(f"place: player={player}, pid={pid}, rc={rc}")
         self.set_piece(player, rc, Piece(pid, player))
         return True
     
@@ -124,7 +140,7 @@ class Board:
     
     def can_move_from_to(self, player: Player, src: Coord, dst: Coord) -> bool:
         # 使用玩家视角的get方法
-        print(f"127can_move_from_to: player={player}, src={src}, dst={dst}")
+        # print(f"127can_move_from_to: player={player}, src={src}, dst={dst}")
         p = self.get_piece(player, src)
         if p is None or p.owner != player or not p.can_move(): 
             return False
