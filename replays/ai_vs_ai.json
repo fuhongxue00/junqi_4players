@@ -1,0 +1,1117 @@
+{
+  "version": 2,
+  "board_size": [
+    17,
+    17
+  ],
+  "piece_mapping": {
+    "0": "EMPTY",
+    "1": "JUNQI",
+    "2": "SILING",
+    "3": "JUNZHANG",
+    "4": "SHIZHANG",
+    "5": "LVZHANG",
+    "6": "TUANZHANG",
+    "7": "YINGZHANG",
+    "8": "LIANZHANG",
+    "9": "PAIZHANG",
+    "10": "GONGBING",
+    "11": "DILEI",
+    "12": "ZHADAN",
+    "13": "UNKNOWN_ENEMY"
+  },
+  "players": {
+    "ORANGE": {
+      "id": "AI_O"
+    },
+    "PURPLE": {
+      "id": "AI_P"
+    },
+    "GREEN": {
+      "id": "AI_G"
+    },
+    "BLUE": {
+      "id": "AI_B"
+    }
+  },
+  "initial_deployments": {
+    "ORANGE": [
+      {
+        "piece": "JUNQI",
+        "pos": [
+          16,
+          7
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          12,
+          8
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          12,
+          6
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          12,
+          10
+        ]
+      },
+      {
+        "piece": "ZHADAN",
+        "pos": [
+          12,
+          9
+        ]
+      },
+      {
+        "piece": "ZHADAN",
+        "pos": [
+          14,
+          8
+        ]
+      },
+      {
+        "piece": "SILING",
+        "pos": [
+          13,
+          8
+        ]
+      },
+      {
+        "piece": "JUNZHANG",
+        "pos": [
+          13,
+          7
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          11,
+          9
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          14,
+          10
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
+          11,
+          7
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
+          15,
+          9
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          12,
+          7
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          15,
+          10
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          11,
+          8
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          16,
+          8
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          16,
+          6
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          11,
+          6
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          13,
+          10
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          11,
+          10
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          15,
+          6
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          14,
+          9
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          15,
+          7
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          16,
+          10
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          14,
+          6
+        ]
+      }
+    ],
+    "PURPLE": [
+      {
+        "piece": "JUNQI",
+        "pos": [
+          16,
+          9
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          16,
+          7
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          13,
+          8
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          11,
+          6
+        ]
+      },
+      {
+        "piece": "ZHADAN",
+        "pos": [
+          11,
+          7
+        ]
+      },
+      {
+        "piece": "ZHADAN",
+        "pos": [
+          12,
+          8
+        ]
+      },
+      {
+        "piece": "SILING",
+        "pos": [
+          14,
+          10
+        ]
+      },
+      {
+        "piece": "JUNZHANG",
+        "pos": [
+          14,
+          7
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          14,
+          6
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          14,
+          9
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
+          15,
+          10
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
+          15,
+          6
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          11,
+          10
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          13,
+          9
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          15,
+          8
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          12,
+          10
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          12,
+          6
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          13,
+          10
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          16,
+          6
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          15,
+          9
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          12,
+          7
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          11,
+          8
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          13,
+          6
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          12,
+          9
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          16,
+          10
+        ]
+      }
+    ],
+    "GREEN": [
+      {
+        "piece": "JUNQI",
+        "pos": [
+          16,
+          9
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          15,
+          6
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          15,
+          10
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          12,
+          10
+        ]
+      },
+      {
+        "piece": "ZHADAN",
+        "pos": [
+          11,
+          10
+        ]
+      },
+      {
+        "piece": "ZHADAN",
+        "pos": [
+          14,
+          6
+        ]
+      },
+      {
+        "piece": "SILING",
+        "pos": [
+          16,
+          7
+        ]
+      },
+      {
+        "piece": "JUNZHANG",
+        "pos": [
+          12,
+          8
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          12,
+          9
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          16,
+          8
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
+          15,
+          7
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
+          11,
+          9
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          14,
+          8
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          15,
+          8
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          13,
+          6
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          15,
+          9
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          14,
+          7
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          13,
+          9
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          11,
+          6
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          13,
+          10
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          14,
+          9
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          16,
+          6
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          12,
+          6
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          13,
+          7
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          16,
+          10
+        ]
+      }
+    ],
+    "BLUE": [
+      {
+        "piece": "JUNQI",
+        "pos": [
+          16,
+          7
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          12,
+          8
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          15,
+          6
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          12,
+          7
+        ]
+      },
+      {
+        "piece": "ZHADAN",
+        "pos": [
+          13,
+          8
+        ]
+      },
+      {
+        "piece": "ZHADAN",
+        "pos": [
+          11,
+          7
+        ]
+      },
+      {
+        "piece": "SILING",
+        "pos": [
+          12,
+          9
+        ]
+      },
+      {
+        "piece": "JUNZHANG",
+        "pos": [
+          14,
+          9
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          14,
+          8
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          11,
+          9
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
+          16,
+          10
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
+          15,
+          10
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          13,
+          6
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          15,
+          7
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          11,
+          10
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          16,
+          9
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          13,
+          9
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          14,
+          10
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          16,
+          8
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          11,
+          6
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          16,
+          6
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          12,
+          10
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          13,
+          7
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          12,
+          6
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          14,
+          6
+        ]
+      }
+    ]
+  },
+  "moves": [
+    {
+      "turn": 0,
+      "player": "ORANGE",
+      "from": [
+        14,
+        8
+      ],
+      "to": [
+        15,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322228.427993
+    },
+    {
+      "turn": 1,
+      "player": "PURPLE",
+      "from": [
+        14,
+        10
+      ],
+      "to": [
+        14,
+        11
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322228.6686792
+    },
+    {
+      "turn": 2,
+      "player": "GREEN",
+      "from": [
+        14,
+        9
+      ],
+      "to": [
+        14,
+        10
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322228.912032
+    },
+    {
+      "turn": 3,
+      "player": "BLUE",
+      "from": [
+        13,
+        9
+      ],
+      "to": [
+        13,
+        10
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322229.1635125
+    },
+    {
+      "turn": 4,
+      "player": "ORANGE",
+      "from": [
+        11,
+        6
+      ],
+      "to": [
+        11,
+        5
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322229.4092486
+    },
+    {
+      "turn": 5,
+      "player": "PURPLE",
+      "from": [
+        13,
+        6
+      ],
+      "to": [
+        13,
+        7
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322229.6524673
+    },
+    {
+      "turn": 6,
+      "player": "GREEN",
+      "from": [
+        12,
+        6
+      ],
+      "to": [
+        12,
+        7
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322229.8941548
+    },
+    {
+      "turn": 7,
+      "player": "BLUE",
+      "from": [
+        15,
+        7
+      ],
+      "to": [
+        14,
+        7
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322230.145014
+    },
+    {
+      "turn": 8,
+      "player": "ORANGE",
+      "from": [
+        16,
+        10
+      ],
+      "to": [
+        16,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322230.3981457
+    },
+    {
+      "turn": 9,
+      "player": "PURPLE",
+      "from": [
+        16,
+        6
+      ],
+      "to": [
+        16,
+        5
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322230.6432252
+    },
+    {
+      "turn": 10,
+      "player": "GREEN",
+      "from": [
+        13,
+        6
+      ],
+      "to": [
+        13,
+        5
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322230.883102
+    },
+    {
+      "turn": 11,
+      "player": "BLUE",
+      "from": [
+        13,
+        6
+      ],
+      "to": [
+        13,
+        5
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322231.1267471
+    },
+    {
+      "turn": 12,
+      "player": "ORANGE",
+      "from": [
+        11,
+        10
+      ],
+      "to": [
+        10,
+        10
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322231.3689709
+    },
+    {
+      "turn": 13,
+      "player": "PURPLE",
+      "from": [
+        12,
+        10
+      ],
+      "to": [
+        12,
+        11
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322231.6106253
+    },
+    {
+      "turn": 14,
+      "player": "GREEN",
+      "from": [
+        13,
+        9
+      ],
+      "to": [
+        14,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322231.858215
+    },
+    {
+      "turn": 15,
+      "player": "BLUE",
+      "from": [
+        16,
+        9
+      ],
+      "to": [
+        15,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322232.1047595
+    },
+    {
+      "turn": 16,
+      "player": "ORANGE",
+      "from": [
+        11,
+        9
+      ],
+      "to": [
+        11,
+        10
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322232.3479443
+    },
+    {
+      "turn": 17,
+      "player": "PURPLE",
+      "from": [
+        15,
+        6
+      ],
+      "to": [
+        16,
+        6
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322232.6063209
+    },
+    {
+      "turn": 18,
+      "player": "GREEN",
+      "from": [
+        12,
+        7
+      ],
+      "to": [
+        11,
+        7
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322232.8459551
+    },
+    {
+      "turn": 19,
+      "player": "BLUE",
+      "from": [
+        15,
+        10
+      ],
+      "to": [
+        15,
+        11
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757322233.084338
+    }
+  ],
+  "outcome": {
+    "winner": null,
+    "winning_team": null,
+    "reason": "draw"
+  },
+  "meta": {
+    "created": "2025-09-08T09:03:34.644038Z"
+  }
+}
