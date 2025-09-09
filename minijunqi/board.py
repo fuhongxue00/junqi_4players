@@ -16,7 +16,40 @@ class Board:
         self.grid: List[List[Optional[Piece]]] = [[None for _ in range(BOARD_W)] for _ in range(BOARD_H)]
         self.special_areas: List[List[SpecialArea]] = [[SpecialArea.NORMAL for _ in range(BOARD_W)] for _ in range(BOARD_H)]
         self._init_special_areas()
-    
+        self._init_railroad()
+
+
+    # 定义铁路信息，self.railroads为铁路列表，每条铁路是若干坐标的有序列表
+    # self.railroad_map为每个坐标对应的铁路编号集合（可能有交叉）
+    def _init_railroad(self):
+        """初始化铁路信息"""
+        # 定义铁路（这里只是示例，具体铁路布局可根据四国军棋实际规则调整）
+        # 例：横向和纵向的主干铁路
+        self.railroads: List[List[Coord]] = []
+        self.railroads.append([(6,c) for c in range(1,BOARD_W-1)])
+        self.railroads.append([(10,c) for c in range(1,BOARD_W-1)])
+        self.railroads.append([(8,6),(8,8),(8,10)])
+        self.railroads.append([(r,6) for r in range(1,BOARD_H-1)])
+        self.railroads.append([(r,10) for r in range(1,BOARD_H-1)])
+        self.railroads.append([(6,8),(8,8),(10,8)])
+
+        self.railroads.append([(6,c) for c in range(1,6)]+[(r,6) for r in range(5,0,-1)])
+        self.railroads.append([(10,c) for c in range(1,6)]+[(r,6) for r in range(11,16)])
+        self.railroads.append([(10,c) for c in range(15,10,-1)]+[(r,10) for r in range(11,16)])
+        self.railroads.append([(6,c) for c in range(15,10,-1)]+[(r,10) for r in range(5,0,-1)])
+
+        for r in (1,5,11,15):
+            self.railroads.append([(r,c) for c in range(6,11)])
+        for c in (1,5,11,15):
+            self.railroads.append([(r,c) for r in range(6,11)])
+
+        # print(self.railroads)
+        self.pos_to_nodes = {}
+        for rid, path in enumerate(self.railroads):
+            for idx, rc in enumerate(path):
+                self.pos_to_nodes.setdefault(rc, []).append((rid, idx))
+
+
     def _init_special_areas(self):
         """初始化特殊区域"""
         # 设置大本营
@@ -108,14 +141,20 @@ class Board:
         if self.is_camp(global_rc): 
             return False
         
-        # 检查是否在可部署区域内（玩家视角）
+        # 检查是否在可部署区域内（玩家视角，使用玩家传的rc）
         if not self.is_in_deploy_area(player, rc):
             return False
         
         # 军旗只能放在大本营
         if pid == PieceID.JUNQI:
             return self.is_headquarters(global_rc)
-        
+
+        if pid == PieceID.DILEI:
+            tempr , _ = rc
+            return tempr in range(15,17)
+        if pid == PieceID.ZHADAN:
+            tempr , _ = rc
+            return tempr in range(12,17)
         return True
     
     def place(self, player: Player, pid: PieceID, rc: Coord) -> bool:
@@ -142,33 +181,78 @@ class Board:
         # 使用玩家视角的get方法
         # print(f"127can_move_from_to: player={player}, src={src}, dst={dst}")
         p = self.get_piece(player, src)
+        assert self.is_camp(dst) == self.is_camp(self.rotate_coord_to_global(player, dst))
         if p is None or p.owner != player or not p.can_move(): 
             return False
-        
-        # 检查目标位置是否在邻格
-        global_src = self.rotate_coord_to_global(player, src)
-        global_dst = self.rotate_coord_to_global(player, dst)
-        if global_dst not in self.neighbors(global_src): 
+        if self.is_forbidden(dst): 
             return False
-        if self.is_forbidden(global_dst): 
-            return False
-        
         q = self.get_piece(player, dst)
         if q is not None:
             # 不能攻击队友
             if q.owner == player or q.owner == TEAMMATES.get(player):
                 return False
             # 行营规则：如果目标位置是行营且有棋子，不能进攻
-            if self.is_camp(global_dst) and q is not None:
+            if self.is_camp(dst) and q is not None:
                 return False
-        
-        return True
+
+        if dst in self.neighbors(src):
+            return False
+
+        src_r, src_c = src
+        dst_r, dst_c = dst
+        if self.is_camp(src) or self.is_camp(dst):
+
+            dr = abs(src_r - dst_r)
+            dc = abs(src_c - dst_c)
+            if dr <= 1 and dc <= 1 and not (dr == 0 and dc == 0):
+                
+                return True
+
+        for path in self.railroads:  # 每一条铁路是一串有序坐标
+            if (src_r, src_c) in path and (dst_r, dst_c) in path:
+                i = path.index((src_r, src_c))
+                j = path.index((dst_r, dst_c))
+                lo, hi = (i, j) if i <= j else (j, i)
+                blocked = False
+                for k in range(lo + 1, hi):
+                    if self.get_piece(player,path[k]) is not None:
+                        blocked = True
+                        break
+                if not blocked:
+                    return True
+
+        # 3. 工兵全铁路连通搜索：中间节点必须为空，只有最终 dst 允许有棋子
+        if p.pid == PieceID.GONGBING:
+            if src in self.pos_to_nodes and dst in self.pos_to_nodes:
+                from collections import deque
+                q = deque([src])
+                visited = {src}
+                while q:
+                    cur = q.popleft()
+                    if cur == dst:
+                        return True  # 找到一条不被阻挡的铁路路径，直接返回
+
+                    for rid, idx in self.pos_to_nodes.get(cur, []):
+                        path = self.railroads[rid]
+                        for nxt_idx in (idx - 1, idx + 1):
+                            if 0 <= nxt_idx < len(path):
+                                nxt = path[nxt_idx]
+                                if nxt in visited:
+                                    continue
+                                # 中间节点必须为空；只有最终 dst 允许占有棋子
+                                if nxt != dst and self.get_piece(player, nxt) is not None:
+                                    continue
+                                visited.add(nxt)
+                                q.append(nxt)
+        return False
     
     def compare(self, a: Piece, d: Piece) -> str:
         if d.pid == PieceID.JUNQI: 
             return 'attacker'
         if a.pid == PieceID.ZHADAN or d.pid == PieceID.ZHADAN: 
             return 'both'
+        if a.pid == PieceID.GONGBING and d.pid == PieceID.DILEI:
+            return 'attacker'
         sa, sd = STRENGTH[a.pid], STRENGTH[d.pid]
         if sa > sd: 
             return 'attacker'

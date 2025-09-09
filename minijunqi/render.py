@@ -56,7 +56,7 @@ def ascii_board(board: Board, viewer: Player, reveal_all: bool=False, is_deploy:
                 if area == SpecialArea.HEADQUARTERS:
                     row.append('  HQ')
                 elif area == SpecialArea.CAMP:
-                    row.append('  CP')
+                    row.append('  ○')
                 elif area == SpecialArea.FORBIDDEN:
                     row.append('    ')
                 else:

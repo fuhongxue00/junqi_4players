@@ -68,6 +68,7 @@ def play_episode(net: PolicyNet, device: str):
         ev = g.step(src, dst)
         result = ev.get('result', 'default_justmove')
         traj.append((logp, player, result))
+        # print(ascii_board(g.state.board, viewer=player, reveal_all=True, is_deploy=False))
     
     # 计算奖励
     if g.state.winner is not None:

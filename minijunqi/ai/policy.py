@@ -301,9 +301,8 @@ class SharedPolicy:
                     if not p or p.owner != viewer or not p.can_move():
                         continue
                     # 检查是否有合法移动
-                    for dr, dc in DIRS:
-                        rr, cc = r + dr, c + dc
-                        if 0 <= rr < BOARD_H and 0 <= cc < BOARD_W:
+                    for rr in range(BOARD_H):
+                        for cc in range(BOARD_W):
                             if board.can_move_from_to(viewer, (r, c), (rr, cc)):
                                 select_mask[r, c] = 1.0
                                 break
@@ -317,6 +316,9 @@ class SharedPolicy:
         if ps.sum() <= 0:
             idx = int(select_mask.flatten().argmax().item())
         else:
+            print(f"ls: {ls}")
+            print(f"select_mask: {select_mask}")
+            print(f"ps: {ps}")
             idx = int(np.random.choice(HW, p=ps))
         
         rr_sel, cc_sel = divmod(idx, BOARD_W)
@@ -329,12 +331,12 @@ class SharedPolicy:
 
         target_mask = torch.zeros((BOARD_H, BOARD_W), dtype=torch.float32, device=self.device)
         try:
-            for dr, dc in DIRS:
-                rr, cc = src[0] + dr, src[1] + dc
-                if 0 <= rr < BOARD_H and 0 <= cc < BOARD_W:
+
+            for rr in range(BOARD_H):
+                for cc in range(BOARD_W):
                     if board.can_move_from_to(viewer, src, (rr, cc)):
-                        # print(f"can_move_from_to: viewer={viewer}, src={src}, (rr, cc)={(rr, cc)}")
                         target_mask[rr, cc] = 1.0
+
         except Exception:
             target_mask[:] = 1.0
         

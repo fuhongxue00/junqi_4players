@@ -25,7 +25,7 @@ def main():
     os.makedirs(os.path.dirname(args.replay_out) or '.', exist_ok=True)
     os.makedirs(args.renders, exist_ok=True)
 
-    game = Game(GameConfig())
+    # game = Game(GameConfig())
     logger = ReplayLogger()
     logger.set_players('AI_O', 'AI_P', 'AI_G', 'AI_B')
 
@@ -101,7 +101,6 @@ def main():
             if args.count == 1:   
                 print(ascii_board(game.state.board, viewer=Player.ORANGE, reveal_all=True))
                 save_four_player_views(game.state.board, out_dir=args.renders, stem='board_latest')
-        
         # 记录结果
         logger.set_outcome(game.state.winner, game.state.winning_team, game.state.end_reason)
         logger.save(args.replay_out)

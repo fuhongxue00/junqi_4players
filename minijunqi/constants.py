@@ -44,7 +44,7 @@ INITIAL_POOL = {
 }
 
 STRENGTH = {
-    PieceID.JUNQI: -1,     # 军旗不能移动
+    PieceID.JUNQI: -10,     # 军旗不能移动
     PieceID.SILING: 7,     # 司令
     PieceID.JUNZHANG: 6,   # 军长
     PieceID.SHIZHANG: 5,   # 师长
@@ -52,9 +52,9 @@ STRENGTH = {
     PieceID.TUANZHANG: 3,  # 团长
     PieceID.YINGZHANG: 2,  # 营长
     PieceID.LIANZHANG: 1,  # 连长
-    PieceID.PAIZHANG: 1,   # 排长
-    PieceID.GONGBING: 1,   # 工兵
-    PieceID.DILEI: 0,      # 地雷不能移动
+    PieceID.PAIZHANG: 0,   # 排长
+    PieceID.GONGBING: -1,   # 工兵
+    PieceID.DILEI: 8,      # 地雷不能移动
     PieceID.ZHADAN: 1,     # 炸弹
 }
 
