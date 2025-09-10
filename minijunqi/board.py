@@ -186,6 +186,8 @@ class Board:
             return False
         if self.is_forbidden(dst): 
             return False
+        if self.is_headquarters(src):
+            return False
         q = self.get_piece(player, dst)
         if q is not None:
             # 不能攻击队友
@@ -279,14 +281,14 @@ class Board:
         if outcome == 'attacker':
             self.set_piece(player, dst, p)
             self.set_piece(player, src, None)
-            return {'ok': True, 'type': 'capture', 'result': 'attacker', 'flag_captured': flag_captured,'p_owner':p.owner,'q_owner':q.owner}
+            return {'ok': True, 'type': 'capture', 'result': 'attacker', 'flag_captured': flag_captured,'p_owner':p.owner,'q_owner':q.owner,'p_pid':p.pid,'q_pid':q.pid}
         elif outcome == 'defender':
             self.set_piece(player, src, None)
-            return {'ok': True, 'type': 'capture', 'result': 'defender', 'flag_captured': False,'p_owner':p.owner,'q_owner':q.owner}
+            return {'ok': True, 'type': 'capture', 'result': 'defender', 'flag_captured': False,'p_owner':p.owner,'q_owner':q.owner,'p_pid':p.pid,'q_pid':q.pid}
         else:
             self.set_piece(player, src, None)
             self.set_piece(player, dst, None)
-            return {'ok': True, 'type': 'capture', 'result': 'both', 'flag_captured': flag_captured,'p_owner':p.owner,'q_owner':q.owner}
+            return {'ok': True, 'type': 'capture', 'result': 'both', 'flag_captured': flag_captured,'p_owner':p.owner,'q_owner':q.owner,'p_pid':p.pid,'q_pid':q.pid}
     
     def rotate_board_for_player(self, player: Player, obs: List[List[int]]) -> List[List[int]]:
         """为指定玩家旋转棋盘视角"""

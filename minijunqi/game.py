@@ -120,6 +120,8 @@ class Game:
             self.state.no_battle_counter = 0
             if ev.get('flag_captured'):
                 self.eliminate_player(attacked_player)
+                if self.check_winner():
+                    return ev
 
         # 切换到下一个玩家
         if self.state.winner is None and self.state.end_reason is None:
@@ -130,7 +132,9 @@ class Game:
             # 跳过已淘汰的玩家
             while next_player in self.state.eliminated_players or self.check_player_elimination(next_player):
                 self.eliminate_player(next_player)
-                print(f"玩家 {next_player.name} 已淘汰,跳过该玩家")
+                if self.check_winner():
+                    return ev
+                # print(f"玩家 {next_player.name} 已淘汰,跳过该玩家")
                 next_idx = (next_idx + 1) % len(PLAYER_ORDER)
                 next_player = PLAYER_ORDER[next_idx]
             
@@ -139,7 +143,15 @@ class Game:
 
 
         
-        # 检查是否有队伍获胜
+        if self.check_winner():
+            return ev
+        
+        # 检查平局
+        if self.state.winner is None and self.state.no_battle_counter >= self.cfg.no_battle_draw_steps:
+            self.state.end_reason = 'draw'    
+        return ev
+
+    def check_winner(self):
         if not self.state.winner:
             orange_green_team = (Player.ORANGE, Player.GREEN)
             purple_blue_team = (Player.PURPLE, Player.BLUE)
@@ -148,19 +160,17 @@ class Game:
                 self.state.winner = Player.PURPLE  # 紫色队伍获胜
                 self.state.winning_team = purple_blue_team
                 self.state.end_reason = 'team_eliminated'
+                print(f'紫色队伍获胜!!!')
+                return True
             elif self.check_team_elimination(purple_blue_team):
                 self.state.winner = Player.ORANGE  # 橙色队伍获胜
                 self.state.winning_team = orange_green_team
                 self.state.end_reason = 'team_eliminated'
-        
-        # 检查平局
-        if self.state.winner is None and self.state.no_battle_counter >= self.cfg.no_battle_draw_steps:
-            self.state.end_reason = 'draw'
-        
+                print(f'橙色队伍获胜!!!')
+                return True
+        return False
 
-        
-        return ev
-    
+
     def is_over(self) -> bool:
         return self.state.winner is not None or self.state.end_reason is not None
     

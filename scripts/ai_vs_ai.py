@@ -68,7 +68,8 @@ def main():
             piece, rc, _ = agent.select_deploy(game, player)
             ok = game.deploy(player, piece, rc)
             if ok: 
-                logger.log_deploy(player, piece, rc)
+                if args.count == 1:
+                    logger.log_deploy(player, piece, rc)
             
             # 可视化
             time.sleep(args.sleep)
@@ -99,15 +100,17 @@ def main():
                 elif ev['result'] == 'defender':
                     attack_stats[player]['lose'] += 1
             
-            logger.log_move(turn_idx, player, src, dst, ev)
+            
             turn_idx += 1
             
             if args.count == 1:   
+                logger.log_move(turn_idx, player, src, dst, ev)
                 print(ascii_board(game.state.board, viewer=Player.ORANGE, reveal_all=True))
                 save_four_player_views(game.state.board, out_dir=args.renders, stem='board_latest')
         # 记录结果
-        logger.set_outcome(game.state.winner, game.state.winning_team, game.state.end_reason)
-        logger.save(args.replay_out)
+        if args.count == 1:
+            logger.set_outcome(game.state.winner, game.state.winning_team, game.state.end_reason)
+            logger.save(args.replay_out)
         
         print('对局结束：', game.state.end_reason, 'winner=', game.state.winner, 'winning_team=', game.state.winning_team, '总步数:', turn_idx)
         
