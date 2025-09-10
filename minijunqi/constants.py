@@ -77,7 +77,7 @@ HEADQUARTERS_POSITIONS = {
 DEPLOY_AREA_ROWS = (11, 12, 13, 14, 15, 16)  # 最后六行
 DEPLOY_AREA_COLS = (6, 7, 8, 9, 10)          # 中间五列
 
-DEFAULT_NO_BATTLE_DRAW = 20
+DEFAULT_NO_BATTLE_DRAW = 40
 
 # 预定义部署顺序（军旗、地雷、炸弹先放，其余按固定顺序展开多份）
 DEPLOY_SEQUENCE = (

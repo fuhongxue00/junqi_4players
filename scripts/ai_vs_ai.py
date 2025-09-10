@@ -7,6 +7,7 @@ from minijunqi.game import Game, GameConfig
 from minijunqi.render import ascii_board, save_four_player_views
 from minijunqi.replay import ReplayLogger
 from minijunqi.ai.agent import Agent
+import torch
 
 def main():
     ap = argparse.ArgumentParser()
@@ -29,10 +30,13 @@ def main():
     logger = ReplayLogger()
     logger.set_players('AI_O', 'AI_P', 'AI_G', 'AI_B')
 
+
+    # device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    device = 'cpu'
     # 创建四个玩家的Agent
     agents = {}
     for player in PLAYER_ORDER:
-        agents[player] = Agent()
+        agents[player] = Agent(device=device)
     
     # 加载检查点
     if args.ckpt_orange: agents[Player.ORANGE].load(args.ckpt_orange)

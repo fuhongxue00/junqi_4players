@@ -56,6 +56,7 @@ def play_episode(net: PolicyNet, device: str):
     # 对战阶段
     while not g.is_over():
         player = g.state.turn
+
         play_agent = agents[player]
         # 起点，终点，起点概率张量，终点概率张量
         src, dst, ps, pt = play_agent.select_move(g, player)
@@ -87,11 +88,11 @@ def play_episode(net: PolicyNet, device: str):
         if g.state.winner is not None:
             # 获胜队伍获得正奖励
             if g.state.winning_team and player in g.state.winning_team:
-                gain += 10
+                gain += 100
             else:
                 gain -= 10
         elif g.state.end_reason == 'draw':
-            gain -= 5
+            gain -= 15
         
         # 行动奖励
         if result == 'attacker':

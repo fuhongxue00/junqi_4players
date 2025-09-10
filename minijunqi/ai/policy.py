@@ -316,9 +316,9 @@ class SharedPolicy:
         if ps.sum() <= 0:
             idx = int(select_mask.flatten().argmax().item())
         else:
-            print(f"ls: {ls}")
-            print(f"select_mask: {select_mask}")
-            print(f"ps: {ps}")
+            # print(f"ls: {ls}")
+            # print(f"select_mask: {select_mask}")
+            # print(f"ps: {ps}")
             idx = int(np.random.choice(HW, p=ps))
         
         rr_sel, cc_sel = divmod(idx, BOARD_W)

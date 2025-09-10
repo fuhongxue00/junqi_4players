@@ -77,18 +77,18 @@ class Game:
     
     def check_player_elimination(self, player: Player) -> bool:
         """检查玩家是否被淘汰"""
+        if not self.state.board.has_legal_move(player):
+            print(f"玩家 {player.name} 因无棋可走被淘汰")
+            return True  # 无棋可走，被淘汰
+
         # 检查军旗是否被夺
         board = self.state.board
         for r, c in board.iter_coords():
             p = board.get((r, c))
             if p and p.owner == player and p.pid == PieceID.JUNQI:
                 return False  # 军旗还在，未被淘汰
-        
-        # 检查是否有可移动的棋子,这个逻辑不对，到时候要改一下
-        if not board.has_legal_move(player):
-            return True  # 无棋可走，被淘汰
-        
-        return False
+        print("error: check_player_elimination")
+        return True
     
     def check_team_elimination(self, team: Tuple[Player, Player]) -> bool:
         """检查队伍是否被淘汰"""
@@ -99,6 +99,11 @@ class Game:
         if player not in self.state.eliminated_players:
             self.state.eliminated_players.append(player)
             print(f"玩家 {player.name} 被淘汰")
+        # 清空该玩家的所有棋子
+        for r in range(BOARD_H):
+            for c in range(BOARD_W):
+                if self.state.board.get((r, c)) and self.state.board.get((r, c)).owner == player:
+                    self.state.board.set((r, c), None)
     
     def step(self, src: Coord, dst: Coord) -> Dict:
         assert self.state.phase == 'play', 'not in play phase'
@@ -111,22 +116,28 @@ class Game:
         if ev['type'] == 'move': 
             self.state.no_battle_counter += 1
         else:
+            attacked_player = ev.get('q_owner')
             self.state.no_battle_counter = 0
             if ev.get('flag_captured'):
-                # 军旗被夺，检查被攻击方是否被淘汰
-                attacked_player = None
-                for r, c in self.state.board.iter_coords():
-                    p = self.state.board.get((r, c))
-                    if p and p.pid == PieceID.JUNQI and (r, c) == dst:
-                        attacked_player = p.owner
-                        break
-                
-                if attacked_player:
-                    self.eliminate_player(attacked_player)
-        
-        # 检查当前玩家是否被淘汰
-        if self.check_player_elimination(player):
-            self.eliminate_player(player)
+                self.eliminate_player(attacked_player)
+
+        # 切换到下一个玩家
+        if self.state.winner is None and self.state.end_reason is None:
+            current_idx = PLAYER_ORDER.index(player)
+            next_idx = (current_idx + 1) % len(PLAYER_ORDER)
+            next_player = PLAYER_ORDER[next_idx]
+            
+            # 跳过已淘汰的玩家
+            while next_player in self.state.eliminated_players or self.check_player_elimination(next_player):
+                self.eliminate_player(next_player)
+                print(f"玩家 {next_player.name} 已淘汰,跳过该玩家")
+                next_idx = (next_idx + 1) % len(PLAYER_ORDER)
+                next_player = PLAYER_ORDER[next_idx]
+            
+
+            self.state.turn = next_player
+
+
         
         # 检查是否有队伍获胜
         if not self.state.winner:
@@ -146,18 +157,7 @@ class Game:
         if self.state.winner is None and self.state.no_battle_counter >= self.cfg.no_battle_draw_steps:
             self.state.end_reason = 'draw'
         
-        # 切换到下一个玩家
-        if self.state.winner is None and self.state.end_reason is None:
-            current_idx = PLAYER_ORDER.index(player)
-            next_idx = (current_idx + 1) % len(PLAYER_ORDER)
-            next_player = PLAYER_ORDER[next_idx]
-            
-            # 跳过已淘汰的玩家
-            while next_player in self.state.eliminated_players:
-                next_idx = (next_idx + 1) % len(PLAYER_ORDER)
-                next_player = PLAYER_ORDER[next_idx]
-            
-            self.state.turn = next_player
+
         
         return ev
     
