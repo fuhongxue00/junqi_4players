@@ -1,7 +1,7 @@
 
 # -*- coding: utf-8 -*-
 from __future__ import annotations
-from typing import Optional
+from typing import Optional, Tuple
 from PIL import Image, ImageDraw, ImageFont
 import os
 from .constants import Player, PieceID, BOARD_H, BOARD_W, SpecialArea
@@ -75,7 +75,7 @@ def ascii_board(board: Board, viewer: Player, reveal_all: bool=False, is_deploy:
     header = f"视角: {viewer.name}  (reveal_all={reveal_all})"
     return header + "\n" + '\n'.join(rows)
 
-def save_image(board: Board, path: str, viewer: Player, reveal_all: bool=False, title: Optional[str]=None, is_deploy: bool=False):
+def save_image(board: Board, path: str, viewer: Player, reveal_all: bool=False, title: Optional[str]=None, is_deploy: bool=False, src: Optional[Tuple[int, int]]=None, dst: Optional[Tuple[int, int]]=None):
     cell = 32  # 减小格子大小以适应17x17棋盘
     pad = 20
     w = BOARD_W * cell + pad * 2
@@ -146,13 +146,34 @@ def save_image(board: Board, path: str, viewer: Player, reveal_all: bool=False, 
                 tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
                 draw.text((x0 + (cell - tw) // 2, y0 + (cell - th) // 2), '?', fill=(0, 0, 0), font=font)
     
+    # 绘制特殊坐标标记
+    if src is not None:
+        # 从全局坐标转换为玩家视角坐标
+        src_r, src_c = board.rotate_coord_from_global(viewer, src)
+        x0 = pad + src_c * cell
+        y0 = pad + src_r * cell
+        x1 = x0 + cell
+        y1 = y0 + cell
+        # 绘制浅灰色框（透明）
+        draw.rectangle((x0, y0, x1, y1), outline=(255, 200, 200), width=5)
+    
+    if dst is not None:
+        # 从全局坐标转换为玩家视角坐标
+        dst_r, dst_c = board.rotate_coord_from_global(viewer, dst)
+        x0 = pad + dst_c * cell
+        y0 = pad + dst_r * cell
+        x1 = x0 + cell
+        y1 = y0 + cell
+        # 绘制深灰色框（透明）
+        draw.rectangle((x0, y0, x1, y1), outline=(255, 0, 0), width=5)
+    
     # 标题
     t = title or f"{viewer.name} view (reveal_all={reveal_all})"
     draw.text((pad, pad + BOARD_H * cell + 6), t, fill=(0, 0, 0))
     img.save(path)
     return path
 
-def save_four_player_views(board: Board, out_dir: str = '.', stem: str = 'board_latest', is_deploy: bool=False):
+def save_four_player_views(board: Board, out_dir: str = '.', stem: str = 'board_latest', is_deploy: bool=False, src: Optional[Tuple[int, int]]=None, dst: Optional[Tuple[int, int]]=None):
     """保存四个玩家的视角"""
     os.makedirs(out_dir, exist_ok=True)
     paths = {}
@@ -160,17 +181,17 @@ def save_four_player_views(board: Board, out_dir: str = '.', stem: str = 'board_
     # 全信息视角
     paths['all'] = save_image(board, os.path.join(out_dir, f"{stem}_all.png"), 
                              viewer=Player.ORANGE, reveal_all=True, 
-                             is_deploy=is_deploy, title='All Info')
+                             is_deploy=is_deploy, title='All Info', src=src, dst=dst)
     
     # 四个玩家视角
     for player in Player:
         player_name = player.name.lower()
         paths[player_name] = save_image(board, os.path.join(out_dir, f"{stem}_{player_name}.png"), 
                                        viewer=player, reveal_all=False, 
-                                       is_deploy=is_deploy, title=f'{player.name} View')
+                                       is_deploy=is_deploy, title=f'{player.name} View', src=src, dst=dst)
     
     return paths
 
-def save_triple_latest(board: Board, out_dir: str = '.', stem: str = 'board_latest', is_deploy: bool=False):
+def save_triple_latest(board: Board, out_dir: str = '.', stem: str = 'board_latest', is_deploy: bool=False, src: Optional[Tuple[int, int]]=None, dst: Optional[Tuple[int, int]]=None):
     """保持向后兼容，但使用四国视角"""
-    return save_four_player_views(board, out_dir, stem, is_deploy)
+    return save_four_player_views(board, out_dir, stem, is_deploy, src, dst)

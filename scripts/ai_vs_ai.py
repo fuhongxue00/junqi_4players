@@ -75,8 +75,8 @@ def main():
             time.sleep(args.sleep)
             if args.count == 1:
                 print(ascii_board(game.state.board, viewer=Player.ORANGE, reveal_all=True, is_deploy=True))
-                save_four_player_views(game.state.board, out_dir=args.renders, stem='board_latest', is_deploy=True)
-        
+                # save_four_player_views(game.state.board, out_dir=args.renders, stem='board_latest', is_deploy=True)
+
         print('部署完毕，开始对局。')
         for agent in agents.values():
             agent.reset()
@@ -106,7 +106,10 @@ def main():
             if args.count == 1:   
                 logger.log_move(turn_idx, player, src, dst, ev)
                 print(ascii_board(game.state.board, viewer=Player.ORANGE, reveal_all=True))
-                save_four_player_views(game.state.board, out_dir=args.renders, stem='board_latest')
+                # 将src和dst转换为全局坐标
+                global_src = game.state.board.rotate_coord_to_global(player, src)
+                global_dst = game.state.board.rotate_coord_to_global(player, dst)
+                save_four_player_views(game.state.board, out_dir=args.renders, stem='board_latest', src=global_src, dst=global_dst)
         # 记录结果
         if args.count == 1:
             logger.set_outcome(game.state.winner, game.state.winning_team, game.state.end_reason)
