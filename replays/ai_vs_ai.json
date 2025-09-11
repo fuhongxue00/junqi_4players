@@ -46,8 +46,15 @@
       {
         "piece": "DILEI",
         "pos": [
-          15,
+          16,
           9
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          16,
+          8
         ]
       },
       {
@@ -58,16 +65,9 @@
         ]
       },
       {
-        "piece": "DILEI",
-        "pos": [
-          15,
-          8
-        ]
-      },
-      {
         "piece": "ZHADAN",
         "pos": [
-          15,
+          16,
           6
         ]
       },
@@ -75,140 +75,140 @@
         "piece": "ZHADAN",
         "pos": [
           15,
-          10
+          8
         ]
       },
       {
         "piece": "SILING",
         "pos": [
           11,
-          10
+          6
         ]
       },
       {
         "piece": "JUNZHANG",
         "pos": [
-          11,
-          6
+          12,
+          8
         ]
       },
       {
         "piece": "SHIZHANG",
+        "pos": [
+          14,
+          10
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          12,
+          10
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
+          14,
+          8
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
+          13,
+          10
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          13,
+          6
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          15,
+          6
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          14,
+          6
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          11,
+          9
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          11,
+          7
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          13,
+          7
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          15,
+          10
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          11,
+          10
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          15,
+          9
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          13,
+          9
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          12,
+          6
+        ]
+      },
+      {
+        "piece": "GONGBING",
         "pos": [
           15,
           7
         ]
       },
       {
-        "piece": "SHIZHANG",
-        "pos": [
-          13,
-          10
-        ]
-      },
-      {
-        "piece": "LVZHANG",
-        "pos": [
-          13,
-          7
-        ]
-      },
-      {
-        "piece": "LVZHANG",
+        "piece": "GONGBING",
         "pos": [
           11,
           8
-        ]
-      },
-      {
-        "piece": "TUANZHANG",
-        "pos": [
-          11,
-          9
-        ]
-      },
-      {
-        "piece": "TUANZHANG",
-        "pos": [
-          13,
-          9
-        ]
-      },
-      {
-        "piece": "YINGZHANG",
-        "pos": [
-          14,
-          10
-        ]
-      },
-      {
-        "piece": "YINGZHANG",
-        "pos": [
-          12,
-          8
-        ]
-      },
-      {
-        "piece": "LIANZHANG",
-        "pos": [
-          13,
-          6
-        ]
-      },
-      {
-        "piece": "LIANZHANG",
-        "pos": [
-          11,
-          7
-        ]
-      },
-      {
-        "piece": "LIANZHANG",
-        "pos": [
-          16,
-          6
-        ]
-      },
-      {
-        "piece": "PAIZHANG",
-        "pos": [
-          16,
-          8
-        ]
-      },
-      {
-        "piece": "PAIZHANG",
-        "pos": [
-          12,
-          6
-        ]
-      },
-      {
-        "piece": "PAIZHANG",
-        "pos": [
-          12,
-          10
-        ]
-      },
-      {
-        "piece": "GONGBING",
-        "pos": [
-          16,
-          9
-        ]
-      },
-      {
-        "piece": "GONGBING",
-        "pos": [
-          14,
-          8
-        ]
-      },
-      {
-        "piece": "GONGBING",
-        "pos": [
-          14,
-          6
         ]
       }
     ],
@@ -223,6 +223,13 @@
       {
         "piece": "DILEI",
         "pos": [
+          15,
+          7
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
           16,
           8
         ]
@@ -230,35 +237,28 @@
       {
         "piece": "DILEI",
         "pos": [
-          15,
-          8
+          16,
+          10
         ]
       },
       {
-        "piece": "DILEI",
+        "piece": "ZHADAN",
         "pos": [
           16,
-          6
+          7
         ]
       },
       {
         "piece": "ZHADAN",
         "pos": [
-          13,
-          6
-        ]
-      },
-      {
-        "piece": "ZHADAN",
-        "pos": [
-          15,
+          14,
           10
         ]
       },
       {
         "piece": "SILING",
         "pos": [
-          12,
+          11,
           6
         ]
       },
@@ -266,126 +266,126 @@
         "piece": "JUNZHANG",
         "pos": [
           14,
-          6
+          8
         ]
       },
       {
         "piece": "SHIZHANG",
         "pos": [
           16,
-          10
+          6
         ]
       },
       {
         "piece": "SHIZHANG",
         "pos": [
-          15,
-          6
-        ]
-      },
-      {
-        "piece": "LVZHANG",
-        "pos": [
-          13,
-          9
-        ]
-      },
-      {
-        "piece": "LVZHANG",
-        "pos": [
-          15,
-          9
-        ]
-      },
-      {
-        "piece": "TUANZHANG",
-        "pos": [
           11,
-          7
+          10
         ]
       },
       {
-        "piece": "TUANZHANG",
+        "piece": "LVZHANG",
         "pos": [
           12,
           10
         ]
       },
       {
-        "piece": "YINGZHANG",
-        "pos": [
-          16,
-          7
-        ]
-      },
-      {
-        "piece": "YINGZHANG",
-        "pos": [
-          14,
-          10
-        ]
-      },
-      {
-        "piece": "LIANZHANG",
+        "piece": "LVZHANG",
         "pos": [
           11,
           8
         ]
       },
       {
-        "piece": "LIANZHANG",
-        "pos": [
-          13,
-          7
-        ]
-      },
-      {
-        "piece": "LIANZHANG",
-        "pos": [
-          11,
-          6
-        ]
-      },
-      {
-        "piece": "PAIZHANG",
-        "pos": [
-          13,
-          10
-        ]
-      },
-      {
-        "piece": "PAIZHANG",
-        "pos": [
-          11,
-          10
-        ]
-      },
-      {
-        "piece": "PAIZHANG",
+        "piece": "TUANZHANG",
         "pos": [
           15,
-          7
+          8
         ]
       },
       {
-        "piece": "GONGBING",
+        "piece": "TUANZHANG",
         "pos": [
-          11,
+          15,
           9
         ]
       },
       {
-        "piece": "GONGBING",
+        "piece": "YINGZHANG",
+        "pos": [
+          13,
+          6
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
         "pos": [
           12,
           8
         ]
       },
       {
+        "piece": "LIANZHANG",
+        "pos": [
+          11,
+          9
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          15,
+          6
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          13,
+          7
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          11,
+          7
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          12,
+          6
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          15,
+          10
+        ]
+      },
+      {
         "piece": "GONGBING",
         "pos": [
           14,
-          8
+          6
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          13,
+          9
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          13,
+          10
         ]
       }
     ],
@@ -401,111 +401,111 @@
         "piece": "DILEI",
         "pos": [
           16,
+          6
+        ]
+      },
+      {
+        "piece": "DILEI",
+        "pos": [
+          16,
           7
         ]
       },
       {
         "piece": "DILEI",
         "pos": [
-          15,
-          7
-        ]
-      },
-      {
-        "piece": "DILEI",
-        "pos": [
-          15,
+          16,
           8
         ]
       },
       {
         "piece": "ZHADAN",
         "pos": [
-          15,
-          9
+          12,
+          10
         ]
       },
       {
         "piece": "ZHADAN",
         "pos": [
-          15,
-          6
+          16,
+          10
         ]
       },
       {
         "piece": "SILING",
         "pos": [
-          13,
-          7
+          11,
+          6
         ]
       },
       {
         "piece": "JUNZHANG",
         "pos": [
-          11,
-          9
-        ]
-      },
-      {
-        "piece": "SHIZHANG",
-        "pos": [
-          11,
+          14,
           10
         ]
       },
       {
         "piece": "SHIZHANG",
         "pos": [
+          12,
+          8
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          11,
+          7
+        ]
+      },
+      {
+        "piece": "LVZHANG",
+        "pos": [
           13,
-          6
+          7
         ]
       },
       {
         "piece": "LVZHANG",
         "pos": [
           15,
-          10
-        ]
-      },
-      {
-        "piece": "LVZHANG",
-        "pos": [
-          11,
-          6
-        ]
-      },
-      {
-        "piece": "TUANZHANG",
-        "pos": [
-          11,
-          8
-        ]
-      },
-      {
-        "piece": "TUANZHANG",
-        "pos": [
-          13,
-          10
-        ]
-      },
-      {
-        "piece": "YINGZHANG",
-        "pos": [
-          13,
           9
         ]
       },
       {
+        "piece": "TUANZHANG",
+        "pos": [
+          13,
+          10
+        ]
+      },
+      {
+        "piece": "TUANZHANG",
+        "pos": [
+          15,
+          6
+        ]
+      },
+      {
         "piece": "YINGZHANG",
         "pos": [
-          12,
-          6
+          14,
+          8
+        ]
+      },
+      {
+        "piece": "YINGZHANG",
+        "pos": [
+          11,
+          9
         ]
       },
       {
         "piece": "LIANZHANG",
         "pos": [
-          11,
+          15,
           7
         ]
       },
@@ -519,50 +519,50 @@
       {
         "piece": "LIANZHANG",
         "pos": [
-          12,
-          10
+          13,
+          9
         ]
       },
       {
         "piece": "PAIZHANG",
         "pos": [
-          16,
-          8
-        ]
-      },
-      {
-        "piece": "PAIZHANG",
-        "pos": [
-          16,
-          10
-        ]
-      },
-      {
-        "piece": "PAIZHANG",
-        "pos": [
-          16,
+          13,
           6
         ]
       },
       {
-        "piece": "GONGBING",
+        "piece": "PAIZHANG",
         "pos": [
-          14,
+          15,
+          8
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          11,
           10
         ]
       },
       {
         "piece": "GONGBING",
         "pos": [
-          12,
+          15,
+          10
+        ]
+      },
+      {
+        "piece": "GONGBING",
+        "pos": [
+          11,
           8
         ]
       },
       {
         "piece": "GONGBING",
         "pos": [
-          14,
-          8
+          12,
+          6
         ]
       }
     ],
@@ -571,13 +571,6 @@
         "piece": "JUNQI",
         "pos": [
           16,
-          7
-        ]
-      },
-      {
-        "piece": "DILEI",
-        "pos": [
-          16,
           9
         ]
       },
@@ -596,59 +589,66 @@
         ]
       },
       {
-        "piece": "ZHADAN",
+        "piece": "DILEI",
         "pos": [
-          15,
-          8
+          16,
+          7
         ]
       },
       {
         "piece": "ZHADAN",
         "pos": [
-          12,
+          14,
+          10
+        ]
+      },
+      {
+        "piece": "ZHADAN",
+        "pos": [
+          14,
           8
         ]
       },
       {
         "piece": "SILING",
         "pos": [
-          15,
-          7
+          11,
+          6
         ]
       },
       {
         "piece": "JUNZHANG",
         "pos": [
+          16,
+          6
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
+          16,
+          8
+        ]
+      },
+      {
+        "piece": "SHIZHANG",
+        "pos": [
           11,
           10
         ]
       },
       {
-        "piece": "SHIZHANG",
+        "piece": "LVZHANG",
         "pos": [
-          11,
-          7
+          12,
+          10
         ]
       },
       {
-        "piece": "SHIZHANG",
+        "piece": "LVZHANG",
         "pos": [
           13,
           9
-        ]
-      },
-      {
-        "piece": "LVZHANG",
-        "pos": [
-          13,
-          6
-        ]
-      },
-      {
-        "piece": "LVZHANG",
-        "pos": [
-          16,
-          8
         ]
       },
       {
@@ -661,40 +661,54 @@
       {
         "piece": "TUANZHANG",
         "pos": [
-          11,
-          6
-        ]
-      },
-      {
-        "piece": "YINGZHANG",
-        "pos": [
-          14,
+          12,
           8
         ]
       },
       {
         "piece": "YINGZHANG",
         "pos": [
-          16,
-          6
+          13,
+          7
         ]
       },
       {
-        "piece": "LIANZHANG",
+        "piece": "YINGZHANG",
         "pos": [
-          13,
+          11,
           7
         ]
       },
       {
         "piece": "LIANZHANG",
         "pos": [
-          15,
+          13,
+          6
+        ]
+      },
+      {
+        "piece": "LIANZHANG",
+        "pos": [
+          11,
           9
         ]
       },
       {
         "piece": "LIANZHANG",
+        "pos": [
+          13,
+          10
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
+        "pos": [
+          11,
+          8
+        ]
+      },
+      {
+        "piece": "PAIZHANG",
         "pos": [
           12,
           6
@@ -708,37 +722,23 @@
         ]
       },
       {
-        "piece": "PAIZHANG",
+        "piece": "GONGBING",
         "pos": [
-          14,
-          10
-        ]
-      },
-      {
-        "piece": "PAIZHANG",
-        "pos": [
-          11,
+          15,
           9
         ]
       },
       {
         "piece": "GONGBING",
         "pos": [
-          12,
-          10
+          15,
+          7
         ]
       },
       {
         "piece": "GONGBING",
         "pos": [
-          13,
-          10
-        ]
-      },
-      {
-        "piece": "GONGBING",
-        "pos": [
-          11,
+          15,
           8
         ]
       }
@@ -759,32 +759,37 @@
       "event": {
         "ok": true,
         "type": "capture",
-        "result": "attacker",
+        "result": "defender",
         "flag_captured": false,
         "p_owner": 0,
         "q_owner": 1,
-        "p_pid": 2,
-        "q_pid": 8
+        "p_pid": 9,
+        "q_pid": 2
       },
-      "ts": 1757486776.4607272
+      "ts": 1757559377.3589458
     },
     {
       "turn": 2,
       "player": "PURPLE",
       "from": [
-        13,
-        6
+        11,
+        10
       ],
       "to": [
-        12,
-        7
+        10,
+        11
       ],
       "event": {
         "ok": true,
-        "type": "move",
-        "flag_captured": false
+        "type": "capture",
+        "result": "defender",
+        "flag_captured": false,
+        "p_owner": 1,
+        "q_owner": 2,
+        "p_pid": 4,
+        "q_pid": 2
       },
-      "ts": 1757486776.8651304
+      "ts": 1757559409.469526
     },
     {
       "turn": 3,
@@ -800,37 +805,32 @@
       "event": {
         "ok": true,
         "type": "capture",
-        "result": "attacker",
+        "result": "defender",
         "flag_captured": false,
         "p_owner": 2,
         "q_owner": 3,
-        "p_pid": 4,
-        "q_pid": 6
+        "p_pid": 9,
+        "q_pid": 2
       },
-      "ts": 1757486777.2036843
+      "ts": 1757559411.1151552
     },
     {
       "turn": 4,
       "player": "BLUE",
       "from": [
-        12,
-        6
+        11,
+        10
       ],
       "to": [
-        11,
-        6
+        12,
+        9
       ],
       "event": {
         "ok": true,
-        "type": "capture",
-        "result": "defender",
-        "flag_captured": false,
-        "p_owner": 3,
-        "q_owner": 2,
-        "p_pid": 8,
-        "q_pid": 4
+        "type": "move",
+        "flag_captured": false
       },
-      "ts": 1757486777.4710886
+      "ts": 1757559413.639352
     },
     {
       "turn": 5,
@@ -840,611 +840,67 @@
         6
       ],
       "to": [
-        12,
-        7
+        10,
+        5
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486777.7340267
+      "ts": 1757559416.6328974
     },
     {
       "turn": 6,
       "player": "PURPLE",
       "from": [
-        13,
-        7
+        11,
+        6
       ],
       "to": [
-        13,
+        5,
         6
       ],
       "event": {
         "ok": true,
-        "type": "move",
-        "flag_captured": false
+        "type": "capture",
+        "result": "both",
+        "flag_captured": false,
+        "p_owner": 1,
+        "q_owner": 0,
+        "p_pid": 2,
+        "q_pid": 2
       },
-      "ts": 1757486777.999944
+      "ts": 1757559418.5082974
     },
     {
       "turn": 7,
       "player": "GREEN",
       "from": [
-        13,
+        11,
         6
       ],
       "to": [
-        12,
-        7
+        10,
+        5
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486778.2704844
+      "ts": 1757559421.172159
     },
     {
       "turn": 8,
       "player": "BLUE",
       "from": [
         11,
-        8
-      ],
-      "to": [
-        12,
-        9
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486778.6089807
-    },
-    {
-      "turn": 9,
-      "player": "ORANGE",
-      "from": [
-        12,
         6
       ],
       "to": [
         10,
-        5
-      ],
-      "event": {
-        "ok": true,
-        "type": "capture",
-        "result": "defender",
-        "flag_captured": false,
-        "p_owner": 0,
-        "q_owner": 3,
-        "p_pid": 9,
-        "q_pid": 3
-      },
-      "ts": 1757486779.0041876
-    },
-    {
-      "turn": 10,
-      "player": "PURPLE",
-      "from": [
-        12,
-        10
-      ],
-      "to": [
-        12,
-        9
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486779.3925261
-    },
-    {
-      "turn": 11,
-      "player": "GREEN",
-      "from": [
-        11,
-        6
-      ],
-      "to": [
-        10,
-        5
-      ],
-      "event": {
-        "ok": true,
-        "type": "capture",
-        "result": "attacker",
-        "flag_captured": false,
-        "p_owner": 2,
-        "q_owner": 1,
-        "p_pid": 5,
-        "q_pid": 9
-      },
-      "ts": 1757486779.7836065
-    },
-    {
-      "turn": 12,
-      "player": "BLUE",
-      "from": [
-        14,
-        10
-      ],
-      "to": [
-        14,
-        9
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486780.196997
-    },
-    {
-      "turn": 13,
-      "player": "ORANGE",
-      "from": [
-        13,
-        6
-      ],
-      "to": [
-        10,
-        5
-      ],
-      "event": {
-        "ok": true,
-        "type": "capture",
-        "result": "defender",
-        "flag_captured": false,
-        "p_owner": 0,
-        "q_owner": 3,
-        "p_pid": 8,
-        "q_pid": 3
-      },
-      "ts": 1757486780.5802705
-    },
-    {
-      "turn": 14,
-      "player": "PURPLE",
-      "from": [
-        13,
-        6
-      ],
-      "to": [
-        14,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486780.9636612
-    },
-    {
-      "turn": 15,
-      "player": "GREEN",
-      "from": [
-        12,
-        6
-      ],
-      "to": [
-        6,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486781.3507645
-    },
-    {
-      "turn": 16,
-      "player": "BLUE",
-      "from": [
-        12,
-        9
-      ],
-      "to": [
-        11,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486781.7389665
-    },
-    {
-      "turn": 17,
-      "player": "ORANGE",
-      "from": [
-        14,
-        6
-      ],
-      "to": [
-        5,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486782.1337726
-    },
-    {
-      "turn": 18,
-      "player": "PURPLE",
-      "from": [
-        12,
-        7
-      ],
-      "to": [
-        13,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486782.5628772
-    },
-    {
-      "turn": 19,
-      "player": "GREEN",
-      "from": [
-        14,
-        6
-      ],
-      "to": [
-        14,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486782.9435241
-    },
-    {
-      "turn": 20,
-      "player": "BLUE",
-      "from": [
-        13,
-        6
-      ],
-      "to": [
-        12,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486783.322875
-    },
-    {
-      "turn": 21,
-      "player": "ORANGE",
-      "from": [
-        5,
-        10
-      ],
-      "to": [
-        8,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486783.713588
-    },
-    {
-      "turn": 22,
-      "player": "PURPLE",
-      "from": [
-        11,
-        9
-      ],
-      "to": [
-        11,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "capture",
-        "result": "defender",
-        "flag_captured": false,
-        "p_owner": 1,
-        "q_owner": 2,
-        "p_pid": 10,
-        "q_pid": 5
-      },
-      "ts": 1757486784.0903194
-    },
-    {
-      "turn": 23,
-      "player": "GREEN",
-      "from": [
-        6,
-        6
-      ],
-      "to": [
-        6,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "capture",
-        "result": "defender",
-        "flag_captured": false,
-        "p_owner": 2,
-        "q_owner": 3,
-        "p_pid": 7,
-        "q_pid": 3
-      },
-      "ts": 1757486784.4702728
-    },
-    {
-      "turn": 24,
-      "player": "BLUE",
-      "from": [
-        12,
-        6
-      ],
-      "to": [
-        13,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486784.8465402
-    },
-    {
-      "turn": 25,
-      "player": "ORANGE",
-      "from": [
-        8,
-        10
-      ],
-      "to": [
-        8,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "capture",
-        "result": "defender",
-        "flag_captured": false,
-        "p_owner": 0,
-        "q_owner": 1,
-        "p_pid": 10,
-        "q_pid": 8
-      },
-      "ts": 1757486785.2290268
-    },
-    {
-      "turn": 26,
-      "player": "PURPLE",
-      "from": [
-        12,
-        8
-      ],
-      "to": [
-        12,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486785.5973988
-    },
-    {
-      "turn": 27,
-      "player": "GREEN",
-      "from": [
-        10,
-        5
-      ],
-      "to": [
-        10,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486785.8982627
-    },
-    {
-      "turn": 28,
-      "player": "BLUE",
-      "from": [
-        13,
-        6
-      ],
-      "to": [
-        14,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486786.1526513
-    },
-    {
-      "turn": 29,
-      "player": "ORANGE",
-      "from": [
-        10,
-        11
-      ],
-      "to": [
-        9,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "capture",
-        "result": "attacker",
-        "flag_captured": false,
-        "p_owner": 0,
-        "q_owner": 1,
-        "p_pid": 2,
-        "q_pid": 6
-      },
-      "ts": 1757486786.399348
-    },
-    {
-      "turn": 30,
-      "player": "PURPLE",
-      "from": [
-        13,
-        8
-      ],
-      "to": [
-        14,
-        9
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486786.6425667
-    },
-    {
-      "turn": 31,
-      "player": "GREEN",
-      "from": [
-        10,
-        10
-      ],
-      "to": [
-        8,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486786.8938303
-    },
-    {
-      "turn": 32,
-      "player": "BLUE",
-      "from": [
-        12,
-        8
-      ],
-      "to": [
-        13,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486787.1469982
-    },
-    {
-      "turn": 33,
-      "player": "ORANGE",
-      "from": [
-        9,
-        11
-      ],
-      "to": [
-        8,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "capture",
-        "result": "attacker",
-        "flag_captured": false,
-        "p_owner": 0,
-        "q_owner": 1,
-        "p_pid": 2,
-        "q_pid": 8
-      },
-      "ts": 1757486787.3957062
-    },
-    {
-      "turn": 34,
-      "player": "PURPLE",
-      "from": [
-        14,
-        9
-      ],
-      "to": [
-        13,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486787.6498895
-    },
-    {
-      "turn": 35,
-      "player": "GREEN",
-      "from": [
-        8,
-        10
-      ],
-      "to": [
-        8,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "capture",
-        "result": "attacker",
-        "flag_captured": false,
-        "p_owner": 2,
-        "q_owner": 3,
-        "p_pid": 5,
-        "q_pid": 10
-      },
-      "ts": 1757486787.9150522
-    },
-    {
-      "turn": 36,
-      "player": "BLUE",
-      "from": [
-        11,
-        7
-      ],
-      "to": [
-        11,
-        6
+        4
       ],
       "event": {
         "ok": true,
@@ -1453,38 +909,20 @@
         "flag_captured": false,
         "p_owner": 3,
         "q_owner": 2,
-        "p_pid": 4,
-        "q_pid": 4
+        "p_pid": 2,
+        "q_pid": 12
       },
-      "ts": 1757486788.1695523
+      "ts": 1757559423.1984694
     },
     {
-      "turn": 37,
+      "turn": 9,
       "player": "ORANGE",
       "from": [
-        8,
-        11
+        13,
+        6
       ],
       "to": [
-        7,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486788.408096
-    },
-    {
-      "turn": 38,
-      "player": "PURPLE",
-      "from": [
-        13,
-        8
-      ],
-      "to": [
-        13,
+        14,
         7
       ],
       "event": {
@@ -1492,18 +930,36 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486788.6636086
+      "ts": 1757559425.8271644
     },
     {
-      "turn": 39,
-      "player": "GREEN",
+      "turn": 10,
+      "player": "PURPLE",
       "from": [
-        8,
-        11
+        13,
+        6
       ],
       "to": [
-        7,
-        11
+        12,
+        7
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559426.8338432
+    },
+    {
+      "turn": 11,
+      "player": "GREEN",
+      "from": [
+        10,
+        5
+      ],
+      "to": [
+        10,
+        12
       ],
       "event": {
         "ok": true,
@@ -1512,56 +968,56 @@
         "flag_captured": false,
         "p_owner": 2,
         "q_owner": 3,
-        "p_pid": 5,
+        "p_pid": 2,
         "q_pid": 9
       },
-      "ts": 1757486788.9090667
+      "ts": 1757559427.7078729
     },
     {
-      "turn": 40,
+      "turn": 12,
       "player": "BLUE",
       "from": [
-        14,
-        9
+        13,
+        6
       ],
       "to": [
         14,
+        7
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559428.6630273
+    },
+    {
+      "turn": 13,
+      "player": "ORANGE",
+      "from": [
+        13,
         10
       ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486789.1573417
-    },
-    {
-      "turn": 41,
-      "player": "ORANGE",
-      "from": [
-        7,
-        11
-      ],
       "to": [
-        6,
-        11
+        14,
+        9
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486789.4151063
+      "ts": 1757559429.5750625
     },
     {
-      "turn": 42,
+      "turn": 14,
       "player": "PURPLE",
       "from": [
-        15,
-        9
+        11,
+        8
       ],
       "to": [
-        14,
+        12,
         9
       ],
       "event": {
@@ -1569,837 +1025,76 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486789.6699805
+      "ts": 1757559430.4409235
     },
     {
-      "turn": 43,
+      "turn": 15,
       "player": "GREEN",
       "from": [
-        7,
-        11
-      ],
-      "to": [
-        9,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486789.9361806
-    },
-    {
-      "turn": 44,
-      "player": "BLUE",
-      "from": [
-        13,
-        9
-      ],
-      "to": [
-        14,
-        9
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486790.19345
-    },
-    {
-      "turn": 45,
-      "player": "ORANGE",
-      "from": [
-        6,
-        11
-      ],
-      "to": [
-        7,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486790.4411507
-    },
-    {
-      "turn": 46,
-      "player": "PURPLE",
-      "from": [
-        14,
-        7
-      ],
-      "to": [
-        13,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486790.7317805
-    },
-    {
-      "turn": 47,
-      "player": "GREEN",
-      "from": [
-        9,
-        11
-      ],
-      "to": [
-        9,
+        10,
         12
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486791.0755775
-    },
-    {
-      "turn": 48,
-      "player": "BLUE",
-      "from": [
-        13,
-        7
-      ],
-      "to": [
-        13,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486791.4504557
-    },
-    {
-      "turn": 49,
-      "player": "ORANGE",
-      "from": [
-        7,
-        11
       ],
       "to": [
         10,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486791.8912537
-    },
-    {
-      "turn": 50,
-      "player": "PURPLE",
-      "from": [
-        15,
-        6
-      ],
-      "to": [
-        14,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486793.3311572
-    },
-    {
-      "turn": 51,
-      "player": "GREEN",
-      "from": [
-        9,
-        12
-      ],
-      "to": [
-        8,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486794.4825218
-    },
-    {
-      "turn": 52,
-      "player": "BLUE",
-      "from": [
-        14,
-        9
-      ],
-      "to": [
-        13,
-        9
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486795.6883898
-    },
-    {
-      "turn": 53,
-      "player": "ORANGE",
-      "from": [
-        10,
-        11
-      ],
-      "to": [
-        7,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486797.108909
-    },
-    {
-      "turn": 54,
-      "player": "PURPLE",
-      "from": [
-        15,
-        7
-      ],
-      "to": [
-        15,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486798.1219049
-    },
-    {
-      "turn": 55,
-      "player": "GREEN",
-      "from": [
-        8,
-        11
-      ],
-      "to": [
-        7,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486799.3229806
-    },
-    {
-      "turn": 56,
-      "player": "BLUE",
-      "from": [
-        15,
-        10
-      ],
-      "to": [
-        14,
-        9
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486800.418078
-    },
-    {
-      "turn": 57,
-      "player": "ORANGE",
-      "from": [
-        7,
-        11
-      ],
-      "to": [
-        8,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486801.5399275
-    },
-    {
-      "turn": 58,
-      "player": "PURPLE",
-      "from": [
-        12,
-        6
-      ],
-      "to": [
-        8,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486802.7196054
-    },
-    {
-      "turn": 59,
-      "player": "GREEN",
-      "from": [
-        7,
-        11
-      ],
-      "to": [
-        8,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486803.9234788
-    },
-    {
-      "turn": 60,
-      "player": "BLUE",
-      "from": [
-        13,
-        6
-      ],
-      "to": [
-        12,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486805.1102965
-    },
-    {
-      "turn": 61,
-      "player": "ORANGE",
-      "from": [
-        8,
-        11
-      ],
-      "to": [
-        7,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486806.1489582
-    },
-    {
-      "turn": 62,
-      "player": "PURPLE",
-      "from": [
-        12,
-        9
-      ],
-      "to": [
-        12,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486807.5495586
-    },
-    {
-      "turn": 63,
-      "player": "GREEN",
-      "from": [
-        8,
-        11
-      ],
-      "to": [
-        8,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486808.9517233
-    },
-    {
-      "turn": 64,
-      "player": "BLUE",
-      "from": [
-        14,
-        7
-      ],
-      "to": [
-        13,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486810.67937
-    },
-    {
-      "turn": 65,
-      "player": "ORANGE",
-      "from": [
-        7,
-        11
-      ],
-      "to": [
-        9,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486811.0549028
-    },
-    {
-      "turn": 66,
-      "player": "PURPLE",
-      "from": [
-        13,
-        7
-      ],
-      "to": [
-        13,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486811.4251618
-    },
-    {
-      "turn": 67,
-      "player": "GREEN",
-      "from": [
-        8,
-        10
-      ],
-      "to": [
-        8,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486811.8802772
-    },
-    {
-      "turn": 68,
-      "player": "BLUE",
-      "from": [
-        15,
-        8
-      ],
-      "to": [
-        14,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486812.2534678
-    },
-    {
-      "turn": 69,
-      "player": "ORANGE",
-      "from": [
-        9,
-        11
-      ],
-      "to": [
-        7,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486812.6145089
-    },
-    {
-      "turn": 70,
-      "player": "PURPLE",
-      "from": [
-        12,
-        7
-      ],
-      "to": [
-        13,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486812.9941432
-    },
-    {
-      "turn": 71,
-      "player": "GREEN",
-      "from": [
-        8,
-        11
-      ],
-      "to": [
-        7,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486813.3785572
-    },
-    {
-      "turn": 72,
-      "player": "BLUE",
-      "from": [
-        12,
-        6
-      ],
-      "to": [
-        6,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486813.7532158
-    },
-    {
-      "turn": 73,
-      "player": "ORANGE",
-      "from": [
-        7,
-        11
-      ],
-      "to": [
-        8,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486814.9839516
-    },
-    {
-      "turn": 74,
-      "player": "PURPLE",
-      "from": [
-        14,
-        7
-      ],
-      "to": [
-        15,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486816.2978613
-    },
-    {
-      "turn": 75,
-      "player": "GREEN",
-      "from": [
-        7,
-        11
-      ],
-      "to": [
-        7,
-        12
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486817.5436497
-    },
-    {
-      "turn": 76,
-      "player": "BLUE",
-      "from": [
-        14,
-        10
-      ],
-      "to": [
-        15,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486818.5666149
-    },
-    {
-      "turn": 77,
-      "player": "ORANGE",
-      "from": [
-        8,
-        11
-      ],
-      "to": [
-        8,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486820.0307205
-    },
-    {
-      "turn": 78,
-      "player": "PURPLE",
-      "from": [
-        8,
-        6
-      ],
-      "to": [
-        8,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486821.0547006
-    },
-    {
-      "turn": 79,
-      "player": "GREEN",
-      "from": [
-        7,
-        12
-      ],
-      "to": [
-        6,
-        12
-      ],
-      "event": {
-        "ok": true,
-        "type": "capture",
-        "result": "attacker",
-        "flag_captured": false,
-        "p_owner": 2,
-        "q_owner": 3,
-        "p_pid": 5,
-        "q_pid": 10
-      },
-      "ts": 1757486822.2862902
-    },
-    {
-      "turn": 80,
-      "player": "BLUE",
-      "from": [
-        16,
-        8
-      ],
-      "to": [
-        15,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486823.3602555
-    },
-    {
-      "turn": 81,
-      "player": "ORANGE",
-      "from": [
-        8,
-        10
-      ],
-      "to": [
-        8,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486824.4629562
-    },
-    {
-      "turn": 82,
-      "player": "PURPLE",
-      "from": [
-        14,
-        6
-      ],
-      "to": [
-        14,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486825.4554515
-    },
-    {
-      "turn": 83,
-      "player": "GREEN",
-      "from": [
-        6,
-        12
-      ],
-      "to": [
-        7,
-        12
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486826.5300403
-    },
-    {
-      "turn": 84,
-      "player": "BLUE",
-      "from": [
-        13,
-        8
-      ],
-      "to": [
-        12,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486827.5950913
-    },
-    {
-      "turn": 85,
-      "player": "ORANGE",
-      "from": [
-        8,
-        11
-      ],
-      "to": [
-        7,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486828.747138
-    },
-    {
-      "turn": 86,
-      "player": "PURPLE",
-      "from": [
-        13,
-        6
-      ],
-      "to": [
-        14,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486829.9215434
-    },
-    {
-      "turn": 87,
-      "player": "GREEN",
-      "from": [
-        7,
-        12
-      ],
-      "to": [
-        7,
         13
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559431.2602522
+    },
+    {
+      "turn": 16,
+      "player": "BLUE",
+      "from": [
+        11,
+        8
+      ],
+      "to": [
+        12,
+        7
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559432.0466719
+    },
+    {
+      "turn": 17,
+      "player": "ORANGE",
+      "from": [
+        12,
+        6
+      ],
+      "to": [
+        6,
+        12
       ],
       "event": {
         "ok": true,
         "type": "capture",
         "result": "defender",
         "flag_captured": false,
-        "p_owner": 2,
-        "q_owner": 3,
-        "p_pid": 5,
-        "q_pid": 4
+        "p_owner": 0,
+        "q_owner": 1,
+        "p_pid": 10,
+        "q_pid": 5
       },
-      "ts": 1757486831.339163
+      "ts": 1757559432.8408492
     },
     {
-      "turn": 88,
-      "player": "BLUE",
+      "turn": 18,
+      "player": "PURPLE",
       "from": [
-        6,
+        12,
         6
       ],
       "to": [
-        6,
+        10,
         5
       ],
       "event": {
@@ -2407,36 +1102,77 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486832.1124558
+      "ts": 1757559433.6165862
     },
     {
-      "turn": 89,
-      "player": "ORANGE",
+      "turn": 19,
+      "player": "GREEN",
       "from": [
-        7,
-        11
+        10,
+        13
       ],
       "to": [
-        8,
-        11
+        9,
+        13
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 2,
+        "q_owner": 3,
+        "p_pid": 2,
+        "q_pid": 7
+      },
+      "ts": 1757559434.4417276
+    },
+    {
+      "turn": 20,
+      "player": "BLUE",
+      "from": [
+        14,
+        6
+      ],
+      "to": [
+        10,
+        5
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486832.4890583
+      "ts": 1757559435.4915001
     },
     {
-      "turn": 90,
-      "player": "PURPLE",
+      "turn": 21,
+      "player": "ORANGE",
       "from": [
-        12,
+        11,
         8
       ],
       "to": [
-        11,
-        8
+        12,
+        7
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559437.8550522
+    },
+    {
+      "turn": 22,
+      "player": "PURPLE",
+      "from": [
+        10,
+        5
+      ],
+      "to": [
+        9,
+        5
       ],
       "event": {
         "ok": true,
@@ -2445,91 +1181,150 @@
         "flag_captured": false,
         "p_owner": 1,
         "q_owner": 0,
-        "p_pid": 6,
-        "q_pid": 2
+        "p_pid": 9,
+        "q_pid": 7
       },
-      "ts": 1757486832.884166
+      "ts": 1757559439.1454446
     },
     {
-      "turn": 91,
+      "turn": 23,
       "player": "GREEN",
+      "from": [
+        9,
+        13
+      ],
+      "to": [
+        8,
+        13
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559440.1092286
+    },
+    {
+      "turn": 24,
+      "player": "BLUE",
+      "from": [
+        10,
+        5
+      ],
+      "to": [
+        10,
+        13
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559441.270512
+    },
+    {
+      "turn": 25,
+      "player": "ORANGE",
+      "from": [
+        12,
+        10
+      ],
+      "to": [
+        10,
+        13
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559445.5749352
+    },
+    {
+      "turn": 26,
+      "player": "PURPLE",
       "from": [
         15,
         6
       ],
       "to": [
-        11,
-        6
+        14,
+        7
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559446.4735894
+    },
+    {
+      "turn": 27,
+      "player": "GREEN",
+      "from": [
+        8,
+        13
+      ],
+      "to": [
+        7,
+        14
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559447.2705746
+    },
+    {
+      "turn": 28,
+      "player": "BLUE",
+      "from": [
+        10,
+        13
+      ],
+      "to": [
+        10,
+        3
       ],
       "event": {
         "ok": true,
         "type": "capture",
         "result": "both",
         "flag_captured": false,
-        "p_owner": 2,
-        "q_owner": 3,
-        "p_pid": 12,
-        "q_pid": 8
+        "p_owner": 3,
+        "q_owner": 2,
+        "p_pid": 6,
+        "q_pid": 6
       },
-      "ts": 1757486833.2548566
+      "ts": 1757559448.1363475
     },
     {
-      "turn": 92,
-      "player": "BLUE",
-      "from": [
-        14,
-        7
-      ],
-      "to": [
-        13,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486833.643084
-    },
-    {
-      "turn": 93,
+      "turn": 29,
       "player": "ORANGE",
       "from": [
-        8,
-        11
+        10,
+        13
       ],
       "to": [
         9,
-        11
+        13
       ],
       "event": {
         "ok": true,
-        "type": "move",
-        "flag_captured": false
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 0,
+        "q_owner": 1,
+        "p_pid": 4,
+        "q_pid": 8
       },
-      "ts": 1757486835.6808367
+      "ts": 1757559449.1542802
     },
     {
-      "turn": 94,
+      "turn": 30,
       "player": "PURPLE",
-      "from": [
-        14,
-        6
-      ],
-      "to": [
-        11,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486837.191112
-    },
-    {
-      "turn": 95,
-      "player": "GREEN",
       "from": [
         16,
         6
@@ -2543,53 +1338,266 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486837.7371018
+      "ts": 1757559450.0345702
     },
     {
-      "turn": 96,
+      "turn": 31,
+      "player": "GREEN",
+      "from": [
+        7,
+        14
+      ],
+      "to": [
+        6,
+        14
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "both",
+        "flag_captured": false,
+        "p_owner": 2,
+        "q_owner": 3,
+        "p_pid": 2,
+        "q_pid": 12
+      },
+      "ts": 1757559450.8593867
+    },
+    {
+      "turn": 32,
       "player": "BLUE",
       "from": [
         12,
-        8
+        10
       ],
       "to": [
-        11,
-        8
+        4,
+        10
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486839.3484454
+      "ts": 1757559456.415871
     },
     {
-      "turn": 97,
+      "turn": 33,
       "player": "ORANGE",
       "from": [
         9,
-        11
+        13
       ],
       "to": [
-        7,
-        11
+        8,
+        13
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486840.4382238
+      "ts": 1757559457.647491
     },
     {
-      "turn": 98,
+      "turn": 34,
       "player": "PURPLE",
       "from": [
+        15,
+        10
+      ],
+      "to": [
+        14,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559458.657345
+    },
+    {
+      "turn": 35,
+      "player": "GREEN",
+      "from": [
         13,
+        6
+      ],
+      "to": [
+        12,
+        7
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559459.599209
+    },
+    {
+      "turn": 36,
+      "player": "BLUE",
+      "from": [
+        4,
+        10
+      ],
+      "to": [
+        3,
+        10
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559460.7594767
+    },
+    {
+      "turn": 37,
+      "player": "ORANGE",
+      "from": [
+        8,
+        13
+      ],
+      "to": [
+        8,
+        14
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "defender",
+        "flag_captured": false,
+        "p_owner": 0,
+        "q_owner": 1,
+        "p_pid": 4,
+        "q_pid": 3
+      },
+      "ts": 1757559461.3735375
+    },
+    {
+      "turn": 38,
+      "player": "PURPLE",
+      "from": [
+        15,
+        6
+      ],
+      "to": [
+        16,
+        6
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559462.1913319
+    },
+    {
+      "turn": 39,
+      "player": "GREEN",
+      "from": [
+        12,
+        6
+      ],
+      "to": [
+        6,
+        3
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "defender",
+        "flag_captured": false,
+        "p_owner": 2,
+        "q_owner": 3,
+        "p_pid": 10,
+        "q_pid": 5
+      },
+      "ts": 1757559462.841482
+    },
+    {
+      "turn": 40,
+      "player": "BLUE",
+      "from": [
+        3,
+        10
+      ],
+      "to": [
+        3,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559463.5755
+    },
+    {
+      "turn": 41,
+      "player": "ORANGE",
+      "from": [
+        11,
+        7
+      ],
+      "to": [
+        11,
+        6
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559464.109624
+    },
+    {
+      "turn": 42,
+      "player": "PURPLE",
+      "from": [
+        12,
+        10
+      ],
+      "to": [
+        10,
+        13
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559464.996252
+    },
+    {
+      "turn": 43,
+      "player": "GREEN",
+      "from": [
+        11,
         8
       ],
       "to": [
         12,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559465.7793205
+    },
+    {
+      "turn": 44,
+      "player": "BLUE",
+      "from": [
+        3,
+        9
+      ],
+      "to": [
+        3,
         8
       ],
       "event": {
@@ -2597,13 +1605,13 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486841.947256
+      "ts": 1757559466.4912248
     },
     {
-      "turn": 99,
-      "player": "GREEN",
+      "turn": 45,
+      "player": "ORANGE",
       "from": [
-        15,
+        11,
         6
       ],
       "to": [
@@ -2615,166 +1623,45 @@
         "type": "capture",
         "result": "both",
         "flag_captured": false,
-        "p_owner": 2,
-        "q_owner": 1,
-        "p_pid": 9,
-        "q_pid": 9
+        "p_owner": 0,
+        "q_owner": 3,
+        "p_pid": 8,
+        "q_pid": 8
       },
-      "ts": 1757486842.6651073
+      "ts": 1757559467.2994955
     },
     {
-      "turn": 100,
-      "player": "BLUE",
-      "from": [
-        15,
-        8
-      ],
-      "to": [
-        14,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486843.654644
-    },
-    {
-      "turn": 101,
-      "player": "ORANGE",
-      "from": [
-        7,
-        11
-      ],
-      "to": [
-        9,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486845.2724407
-    },
-    {
-      "turn": 102,
+      "turn": 46,
       "player": "PURPLE",
       "from": [
-        14,
-        7
+        10,
+        13
       ],
       "to": [
-        14,
-        6
+        10,
+        2
       ],
       "event": {
         "ok": true,
-        "type": "move",
-        "flag_captured": false
+        "type": "capture",
+        "result": "defender",
+        "flag_captured": false,
+        "p_owner": 1,
+        "q_owner": 0,
+        "p_pid": 5,
+        "q_pid": 4
       },
-      "ts": 1757486846.3549883
+      "ts": 1757559469.944794
     },
     {
-      "turn": 103,
+      "turn": 47,
       "player": "GREEN",
       "from": [
-        14,
-        7
-      ],
-      "to": [
-        15,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486847.2942617
-    },
-    {
-      "turn": 104,
-      "player": "BLUE",
-      "from": [
-        15,
+        12,
         9
       ],
       "to": [
-        15,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486847.7223785
-    },
-    {
-      "turn": 105,
-      "player": "ORANGE",
-      "from": [
-        9,
-        11
-      ],
-      "to": [
-        6,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486848.092546
-    },
-    {
-      "turn": 106,
-      "player": "PURPLE",
-      "from": [
-        15,
-        6
-      ],
-      "to": [
-        14,
-        7
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486848.4847791
-    },
-    {
-      "turn": 107,
-      "player": "GREEN",
-      "from": [
-        15,
-        6
-      ],
-      "to": [
-        16,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486848.8695757
-    },
-    {
-      "turn": 108,
-      "player": "BLUE",
-      "from": [
-        14,
-        9
-      ],
-      "to": [
-        14,
+        13,
         10
       ],
       "event": {
@@ -2782,47 +1669,47 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486849.9245114
+      "ts": 1757559470.8717153
     },
     {
-      "turn": 109,
-      "player": "ORANGE",
+      "turn": 48,
+      "player": "BLUE",
       "from": [
-        6,
-        11
+        3,
+        8
       ],
       "to": [
-        6,
-        12
+        3,
+        9
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486851.5317352
+      "ts": 1757559471.584553
     },
     {
-      "turn": 110,
-      "player": "PURPLE",
+      "turn": 49,
+      "player": "ORANGE",
       "from": [
-        13,
+        12,
         7
       ],
       "to": [
-        13,
-        6
+        11,
+        7
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486853.443557
+      "ts": 1757559472.2593267
     },
     {
-      "turn": 111,
-      "player": "GREEN",
+      "turn": 50,
+      "player": "PURPLE",
       "from": [
         16,
         6
@@ -2836,13 +1723,403 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486854.5410345
+      "ts": 1757559472.9107392
     },
     {
-      "turn": 112,
+      "turn": 51,
+      "player": "GREEN",
+      "from": [
+        13,
+        10
+      ],
+      "to": [
+        6,
+        15
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "defender",
+        "flag_captured": false,
+        "p_owner": 2,
+        "q_owner": 3,
+        "p_pid": 10,
+        "q_pid": 9
+      },
+      "ts": 1757559473.2585173
+    },
+    {
+      "turn": 52,
       "player": "BLUE",
       "from": [
+        3,
+        9
+      ],
+      "to": [
+        3,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559473.5017126
+    },
+    {
+      "turn": 53,
+      "player": "ORANGE",
+      "from": [
+        14,
+        6
+      ],
+      "to": [
+        10,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 0,
+        "q_owner": 3,
+        "p_pid": 7,
+        "q_pid": 9
+      },
+      "ts": 1757559473.7454262
+    },
+    {
+      "turn": 54,
+      "player": "PURPLE",
+      "from": [
+        15,
+        6
+      ],
+      "to": [
+        16,
+        6
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559473.9806516
+    },
+    {
+      "turn": 55,
+      "player": "GREEN",
+      "from": [
+        12,
+        7
+      ],
+      "to": [
+        12,
+        6
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559474.214466
+    },
+    {
+      "turn": 56,
+      "player": "BLUE",
+      "from": [
+        3,
+        8
+      ],
+      "to": [
+        3,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559474.6044235
+    },
+    {
+      "turn": 57,
+      "player": "ORANGE",
+      "from": [
+        10,
+        1
+      ],
+      "to": [
+        9,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 0,
+        "q_owner": 3,
+        "p_pid": 7,
+        "q_pid": 10
+      },
+      "ts": 1757559474.954194
+    },
+    {
+      "turn": 58,
+      "player": "PURPLE",
+      "from": [
+        16,
+        6
+      ],
+      "to": [
+        15,
+        6
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559475.1947305
+    },
+    {
+      "turn": 59,
+      "player": "GREEN",
+      "from": [
+        12,
+        6
+      ],
+      "to": [
+        8,
+        6
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559475.427548
+    },
+    {
+      "turn": 60,
+      "player": "BLUE",
+      "from": [
+        3,
+        9
+      ],
+      "to": [
+        3,
+        10
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559475.9582086
+    },
+    {
+      "turn": 61,
+      "player": "ORANGE",
+      "from": [
+        9,
+        1
+      ],
+      "to": [
+        8,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 0,
+        "q_owner": 3,
+        "p_pid": 7,
+        "q_pid": 10
+      },
+      "ts": 1757559476.316985
+    },
+    {
+      "turn": 62,
+      "player": "PURPLE",
+      "from": [
+        15,
+        6
+      ],
+      "to": [
+        16,
+        6
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559476.582283
+    },
+    {
+      "turn": 63,
+      "player": "GREEN",
+      "from": [
+        8,
+        6
+      ],
+      "to": [
+        8,
+        5
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559477.2138162
+    },
+    {
+      "turn": 64,
+      "player": "BLUE",
+      "from": [
+        3,
+        10
+      ],
+      "to": [
+        3,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559477.6033404
+    },
+    {
+      "turn": 65,
+      "player": "ORANGE",
+      "from": [
+        8,
+        1
+      ],
+      "to": [
+        8,
+        0
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "defender",
+        "flag_captured": false,
+        "p_owner": 0,
+        "q_owner": 3,
+        "p_pid": 7,
+        "q_pid": 4
+      },
+      "ts": 1757559478.1953173
+    },
+    {
+      "turn": 66,
+      "player": "PURPLE",
+      "from": [
+        16,
+        6
+      ],
+      "to": [
+        15,
+        6
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559478.7437499
+    },
+    {
+      "turn": 67,
+      "player": "GREEN",
+      "from": [
+        8,
+        5
+      ],
+      "to": [
+        8,
+        4
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "defender",
+        "flag_captured": false,
+        "p_owner": 2,
+        "q_owner": 1,
+        "p_pid": 9,
+        "q_pid": 7
+      },
+      "ts": 1757559479.309499
+    },
+    {
+      "turn": 68,
+      "player": "BLUE",
+      "from": [
+        3,
+        9
+      ],
+      "to": [
+        3,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559479.8601034
+    },
+    {
+      "turn": 69,
+      "player": "ORANGE",
+      "from": [
         11,
+        7
+      ],
+      "to": [
+        9,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559480.3504333
+    },
+    {
+      "turn": 70,
+      "player": "PURPLE",
+      "from": [
+        14,
+        6
+      ],
+      "to": [
+        6,
+        2
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559480.8495154
+    },
+    {
+      "turn": 71,
+      "player": "GREEN",
+      "from": [
+        12,
         8
       ],
       "to": [
@@ -2854,71 +2131,17 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486856.1229365
+      "ts": 1757559481.3728185
     },
     {
-      "turn": 113,
-      "player": "ORANGE",
-      "from": [
-        6,
-        12
-      ],
-      "to": [
-        6,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486857.0215998
-    },
-    {
-      "turn": 114,
-      "player": "PURPLE",
-      "from": [
-        14,
-        8
-      ],
-      "to": [
-        13,
-        8
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486858.1793373
-    },
-    {
-      "turn": 115,
-      "player": "GREEN",
-      "from": [
-        15,
-        6
-      ],
-      "to": [
-        16,
-        6
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486859.4202151
-    },
-    {
-      "turn": 116,
+      "turn": 72,
       "player": "BLUE",
       "from": [
-        14,
-        10
+        3,
+        8
       ],
       "to": [
-        14,
+        3,
         9
       ],
       "event": {
@@ -2926,35 +2149,579 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486860.5706553
+      "ts": 1757559481.9406567
     },
     {
-      "turn": 117,
+      "turn": 73,
       "player": "ORANGE",
       "from": [
-        6,
-        11
+        9,
+        1
       ],
       "to": [
         7,
-        11
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "both",
+        "flag_captured": false,
+        "p_owner": 0,
+        "q_owner": 3,
+        "p_pid": 10,
+        "q_pid": 10
+      },
+      "ts": 1757559482.598401
+    },
+    {
+      "turn": 74,
+      "player": "PURPLE",
+      "from": [
+        6,
+        2
+      ],
+      "to": [
+        6,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "defender",
+        "flag_captured": false,
+        "p_owner": 1,
+        "q_owner": 0,
+        "p_pid": 10,
+        "q_pid": 6
+      },
+      "ts": 1757559482.9458718
+    },
+    {
+      "turn": 75,
+      "player": "GREEN",
+      "from": [
+        12,
+        9
+      ],
+      "to": [
+        12,
+        10
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486861.9272
+      "ts": 1757559483.6969807
     },
     {
-      "turn": 118,
+      "turn": 76,
+      "player": "BLUE",
+      "from": [
+        3,
+        9
+      ],
+      "to": [
+        3,
+        10
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559484.4280705
+    },
+    {
+      "turn": 77,
+      "player": "ORANGE",
+      "from": [
+        12,
+        8
+      ],
+      "to": [
+        12,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559485.107606
+    },
+    {
+      "turn": 78,
       "player": "PURPLE",
       "from": [
-        14,
+        13,
         10
       ],
       "to": [
+        6,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "defender",
+        "flag_captured": false,
+        "p_owner": 1,
+        "q_owner": 0,
+        "p_pid": 10,
+        "q_pid": 6
+      },
+      "ts": 1757559485.9795315
+    },
+    {
+      "turn": 79,
+      "player": "GREEN",
+      "from": [
+        12,
+        10
+      ],
+      "to": [
+        2,
+        10
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559486.6041017
+    },
+    {
+      "turn": 80,
+      "player": "BLUE",
+      "from": [
+        3,
+        10
+      ],
+      "to": [
+        3,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559487.4577634
+    },
+    {
+      "turn": 81,
+      "player": "ORANGE",
+      "from": [
+        12,
+        9
+      ],
+      "to": [
+        12,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559488.1388
+    },
+    {
+      "turn": 82,
+      "player": "PURPLE",
+      "from": [
+        15,
+        6
+      ],
+      "to": [
         10,
+        2
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "both",
+        "flag_captured": false,
+        "p_owner": 1,
+        "q_owner": 0,
+        "p_pid": 4,
+        "q_pid": 4
+      },
+      "ts": 1757559488.8274992
+    },
+    {
+      "turn": 83,
+      "player": "GREEN",
+      "from": [
+        2,
+        10
+      ],
+      "to": [
+        6,
+        14
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559489.3816874
+    },
+    {
+      "turn": 84,
+      "player": "BLUE",
+      "from": [
+        16,
+        8
+      ],
+      "to": [
+        15,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559490.538221
+    },
+    {
+      "turn": 85,
+      "player": "ORANGE",
+      "from": [
+        15,
+        6
+      ],
+      "to": [
+        10,
+        5
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559491.2841053
+    },
+    {
+      "turn": 86,
+      "player": "PURPLE",
+      "from": [
+        12,
+        8
+      ],
+      "to": [
+        11,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559492.1635
+    },
+    {
+      "turn": 87,
+      "player": "GREEN",
+      "from": [
+        6,
+        14
+      ],
+      "to": [
+        7,
+        14
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559493.204432
+    },
+    {
+      "turn": 88,
+      "player": "BLUE",
+      "from": [
+        3,
+        9
+      ],
+      "to": [
+        3,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559494.2916682
+    },
+    {
+      "turn": 89,
+      "player": "ORANGE",
+      "from": [
+        10,
+        5
+      ],
+      "to": [
+        10,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559495.3422635
+    },
+    {
+      "turn": 90,
+      "player": "PURPLE",
+      "from": [
+        11,
+        8
+      ],
+      "to": [
+        10,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559496.307167
+    },
+    {
+      "turn": 91,
+      "player": "GREEN",
+      "from": [
+        7,
+        14
+      ],
+      "to": [
+        7,
+        13
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 2,
+        "q_owner": 3,
+        "p_pid": 4,
+        "q_pid": 5
+      },
+      "ts": 1757559497.528756
+    },
+    {
+      "turn": 92,
+      "player": "BLUE",
+      "from": [
+        3,
+        8
+      ],
+      "to": [
+        3,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559499.4593847
+    },
+    {
+      "turn": 93,
+      "player": "ORANGE",
+      "from": [
+        10,
+        1
+      ],
+      "to": [
+        9,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559500.5149055
+    },
+    {
+      "turn": 94,
+      "player": "PURPLE",
+      "from": [
+        10,
+        8
+      ],
+      "to": [
+        10,
+        2
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559501.699959
+    },
+    {
+      "turn": 95,
+      "player": "GREEN",
+      "from": [
+        7,
+        13
+      ],
+      "to": [
+        7,
+        14
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559503.8863225
+    },
+    {
+      "turn": 96,
+      "player": "BLUE",
+      "from": [
+        3,
+        9
+      ],
+      "to": [
+        3,
+        10
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559505.2992747
+    },
+    {
+      "turn": 97,
+      "player": "ORANGE",
+      "from": [
+        9,
+        1
+      ],
+      "to": [
+        9,
+        0
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": true,
+        "p_owner": 0,
+        "q_owner": 3,
+        "p_pid": 6,
+        "q_pid": 1
+      },
+      "ts": 1757559506.5243866
+    },
+    {
+      "turn": 98,
+      "player": "PURPLE",
+      "from": [
+        10,
+        2
+      ],
+      "to": [
+        10,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 1,
+        "q_owner": 0,
+        "p_pid": 7,
+        "q_pid": 8
+      },
+      "ts": 1757559508.8735743
+    },
+    {
+      "turn": 99,
+      "player": "GREEN",
+      "from": [
+        7,
+        14
+      ],
+      "to": [
+        8,
+        14
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559510.1745324
+    },
+    {
+      "turn": 100,
+      "player": "ORANGE",
+      "from": [
+        16,
+        6
+      ],
+      "to": [
+        15,
+        6
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559511.053889
+    },
+    {
+      "turn": 101,
+      "player": "PURPLE",
+      "from": [
+        10,
+        1
+      ],
+      "to": [
+        9,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 1,
+        "q_owner": 0,
+        "p_pid": 7,
+        "q_pid": 9
+      },
+      "ts": 1757559511.9122968
+    },
+    {
+      "turn": 102,
+      "player": "GREEN",
+      "from": [
+        8,
+        14
+      ],
+      "to": [
+        8,
         13
       ],
       "event": {
@@ -2962,35 +2729,333 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486862.48839
+      "ts": 1757559512.8494024
     },
     {
-      "turn": 119,
-      "player": "GREEN",
+      "turn": 103,
+      "player": "ORANGE",
       "from": [
-        16,
+        15,
         6
       ],
       "to": [
-        15,
-        6
+        10,
+        1
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486863.0434508
+      "ts": 1757559513.5662022
     },
     {
-      "turn": 120,
-      "player": "BLUE",
+      "turn": 104,
+      "player": "PURPLE",
+      "from": [
+        9,
+        1
+      ],
+      "to": [
+        9,
+        0
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "defender",
+        "flag_captured": false,
+        "p_owner": 1,
+        "q_owner": 0,
+        "p_pid": 7,
+        "q_pid": 11
+      },
+      "ts": 1757559514.5815322
+    },
+    {
+      "turn": 105,
+      "player": "GREEN",
+      "from": [
+        8,
+        13
+      ],
+      "to": [
+        8,
+        14
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559515.8215036
+    },
+    {
+      "turn": 106,
+      "player": "ORANGE",
+      "from": [
+        10,
+        1
+      ],
+      "to": [
+        9,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559516.47978
+    },
+    {
+      "turn": 107,
+      "player": "PURPLE",
+      "from": [
+        12,
+        9
+      ],
+      "to": [
+        11,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559517.0611403
+    },
+    {
+      "turn": 108,
+      "player": "GREEN",
+      "from": [
+        8,
+        14
+      ],
+      "to": [
+        8,
+        15
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559517.695889
+    },
+    {
+      "turn": 109,
+      "player": "ORANGE",
+      "from": [
+        9,
+        1
+      ],
+      "to": [
+        10,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559518.1845822
+    },
+    {
+      "turn": 110,
+      "player": "PURPLE",
+      "from": [
+        11,
+        8
+      ],
+      "to": [
+        12,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559518.75523
+    },
+    {
+      "turn": 111,
+      "player": "GREEN",
+      "from": [
+        8,
+        15
+      ],
+      "to": [
+        8,
+        16
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559519.3497598
+    },
+    {
+      "turn": 112,
+      "player": "ORANGE",
+      "from": [
+        10,
+        1
+      ],
+      "to": [
+        7,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559519.8833008
+    },
+    {
+      "turn": 113,
+      "player": "PURPLE",
+      "from": [
+        12,
+        9
+      ],
+      "to": [
+        13,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559520.3650134
+    },
+    {
+      "turn": 114,
+      "player": "GREEN",
+      "from": [
+        8,
+        16
+      ],
+      "to": [
+        9,
+        16
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559520.9290507
+    },
+    {
+      "turn": 115,
+      "player": "ORANGE",
+      "from": [
+        7,
+        1
+      ],
+      "to": [
+        9,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559521.3216455
+    },
+    {
+      "turn": 116,
+      "player": "PURPLE",
       "from": [
         13,
         8
       ],
       "to": [
+        12,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559521.8349154
+    },
+    {
+      "turn": 117,
+      "player": "GREEN",
+      "from": [
+        14,
+        6
+      ],
+      "to": [
+        10,
+        2
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "both",
+        "flag_captured": false,
+        "p_owner": 2,
+        "q_owner": 1,
+        "p_pid": 8,
+        "q_pid": 12
+      },
+      "ts": 1757559522.2689264
+    },
+    {
+      "turn": 118,
+      "player": "ORANGE",
+      "from": [
+        9,
+        1
+      ],
+      "to": [
+        7,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559522.7695637
+    },
+    {
+      "turn": 119,
+      "player": "PURPLE",
+      "from": [
+        12,
+        9
+      ],
+      "to": [
         13,
+        8
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559523.2920036
+    },
+    {
+      "turn": 120,
+      "player": "GREEN",
+      "from": [
+        11,
+        7
+      ],
+      "to": [
+        12,
         7
       ],
       "event": {
@@ -2998,53 +3063,53 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486863.401263
+      "ts": 1757559523.7886631
     },
     {
       "turn": 121,
       "player": "ORANGE",
       "from": [
         7,
-        11
+        1
       ],
       "to": [
-        7,
-        12
+        9,
+        1
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486863.7558432
+      "ts": 1757559524.248897
     },
     {
       "turn": 122,
       "player": "PURPLE",
       "from": [
-        8,
-        10
+        13,
+        8
       ],
       "to": [
-        5,
-        10
+        12,
+        9
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486864.0966082
+      "ts": 1757559524.7316012
     },
     {
       "turn": 123,
       "player": "GREEN",
       "from": [
-        15,
-        6
+        12,
+        7
       ],
       "to": [
-        14,
+        11,
         7
       ],
       "event": {
@@ -3052,125 +3117,53 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486864.9539356
+      "ts": 1757559525.2057598
     },
     {
       "turn": 124,
-      "player": "BLUE",
+      "player": "ORANGE",
       "from": [
-        11,
-        10
+        9,
+        1
       ],
       "to": [
-        10,
-        12
+        8,
+        1
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486866.8870392
+      "ts": 1757559525.697997
     },
     {
       "turn": 125,
-      "player": "ORANGE",
-      "from": [
-        7,
-        12
-      ],
-      "to": [
-        6,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486867.6528623
-    },
-    {
-      "turn": 126,
       "player": "PURPLE",
       "from": [
-        12,
-        8
-      ],
-      "to": [
         12,
         9
       ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486869.1825533
-    },
-    {
-      "turn": 127,
-      "player": "GREEN",
-      "from": [
-        12,
-        10
-      ],
       "to": [
         11,
-        10
+        8
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486870.2501893
+      "ts": 1757559526.2664986
     },
     {
-      "turn": 128,
-      "player": "BLUE",
+      "turn": 126,
+      "player": "GREEN",
       "from": [
-        15,
-        10
-      ],
-      "to": [
-        14,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486871.3209085
-    },
-    {
-      "turn": 129,
-      "player": "ORANGE",
-      "from": [
-        6,
-        11
-      ],
-      "to": [
-        7,
-        11
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486872.793374
-    },
-    {
-      "turn": 130,
-      "player": "PURPLE",
-      "from": [
-        15,
+        11,
         7
       ],
       "to": [
-        15,
+        11,
         6
       ],
       "event": {
@@ -3178,17 +3171,89 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486874.2442427
+      "ts": 1757559526.821668
     },
     {
-      "turn": 131,
-      "player": "GREEN",
+      "turn": 127,
+      "player": "ORANGE",
       "from": [
-        11,
-        10
+        8,
+        1
       ],
       "to": [
         8,
+        0
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559527.3773694
+    },
+    {
+      "turn": 128,
+      "player": "PURPLE",
+      "from": [
+        11,
+        8
+      ],
+      "to": [
+        12,
+        9
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559528.0274372
+    },
+    {
+      "turn": 129,
+      "player": "GREEN",
+      "from": [
+        11,
+        6
+      ],
+      "to": [
+        10,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559528.733127
+    },
+    {
+      "turn": 130,
+      "player": "ORANGE",
+      "from": [
+        8,
+        0
+      ],
+      "to": [
+        8,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559529.4511178
+    },
+    {
+      "turn": 131,
+      "player": "PURPLE",
+      "from": [
+        12,
+        9
+      ],
+      "to": [
+        11,
         10
       ],
       "event": {
@@ -3196,159 +3261,218 @@
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486875.607445
+      "ts": 1757559530.0600278
     },
     {
       "turn": 132,
-      "player": "BLUE",
+      "player": "GREEN",
       "from": [
-        13,
-        9
+        10,
+        1
       ],
       "to": [
-        13,
-        8
+        9,
+        1
       ],
       "event": {
         "ok": true,
-        "type": "move",
-        "flag_captured": false
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 2,
+        "q_owner": 1,
+        "p_pid": 4,
+        "q_pid": 6
       },
-      "ts": 1757486876.7208102
+      "ts": 1757559530.7261417
     },
     {
       "turn": 133,
       "player": "ORANGE",
       "from": [
-        7,
-        11
+        8,
+        1
       ],
       "to": [
-        9,
-        11
+        8,
+        0
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486878.0409474
+      "ts": 1757559531.3693893
     },
     {
       "turn": 134,
       "player": "PURPLE",
       "from": [
         11,
-        6
+        10
       ],
       "to": [
-        8,
-        6
+        10,
+        15
       ],
       "event": {
         "ok": true,
-        "type": "move",
-        "flag_captured": false
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 1,
+        "q_owner": 2,
+        "p_pid": 5,
+        "q_pid": 6
       },
-      "ts": 1757486878.9931443
+      "ts": 1757559532.122472
     },
     {
       "turn": 135,
       "player": "GREEN",
       "from": [
-        8,
-        10
+        9,
+        1
       ],
       "to": [
         8,
-        11
+        1
       ],
       "event": {
         "ok": true,
-        "type": "move",
-        "flag_captured": false
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": false,
+        "p_owner": 2,
+        "q_owner": 1,
+        "p_pid": 4,
+        "q_pid": 6
       },
-      "ts": 1757486879.3683722
+      "ts": 1757559532.7177825
     },
     {
       "turn": 136,
-      "player": "BLUE",
+      "player": "ORANGE",
       "from": [
-        15,
-        8
+        8,
+        0
       ],
       "to": [
-        15,
-        9
+        8,
+        1
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486879.723999
+      "ts": 1757559533.2507927
     },
     {
       "turn": 137,
-      "player": "ORANGE",
+      "player": "PURPLE",
       "from": [
-        9,
-        11
+        10,
+        15
       ],
       "to": [
-        7,
-        11
+        10,
+        2
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486880.1648064
+      "ts": 1757559533.833336
     },
     {
       "turn": 138,
-      "player": "PURPLE",
-      "from": [
-        13,
-        9
-      ],
-      "to": [
-        13,
-        10
-      ],
-      "event": {
-        "ok": true,
-        "type": "move",
-        "flag_captured": false
-      },
-      "ts": 1757486880.709029
-    },
-    {
-      "turn": 139,
       "player": "GREEN",
       "from": [
         8,
-        11
+        1
       ],
       "to": [
-        7,
-        11
+        9,
+        1
       ],
       "event": {
         "ok": true,
         "type": "move",
         "flag_captured": false
       },
-      "ts": 1757486881.061837
+      "ts": 1757559534.4860277
+    },
+    {
+      "turn": 139,
+      "player": "ORANGE",
+      "from": [
+        8,
+        1
+      ],
+      "to": [
+        10,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559535.2780623
+    },
+    {
+      "turn": 140,
+      "player": "PURPLE",
+      "from": [
+        10,
+        2
+      ],
+      "to": [
+        10,
+        1
+      ],
+      "event": {
+        "ok": true,
+        "type": "move",
+        "flag_captured": false
+      },
+      "ts": 1757559535.5355377
+    },
+    {
+      "turn": 141,
+      "player": "GREEN",
+      "from": [
+        9,
+        1
+      ],
+      "to": [
+        9,
+        0
+      ],
+      "event": {
+        "ok": true,
+        "type": "capture",
+        "result": "attacker",
+        "flag_captured": true,
+        "p_owner": 2,
+        "q_owner": 1,
+        "p_pid": 4,
+        "q_pid": 1
+      },
+      "ts": 1757559535.7230396
     }
   ],
   "outcome": {
-    "winner": null,
-    "winning_team": null,
-    "reason": "draw"
+    "winner": "ORANGE",
+    "winning_team": [
+      "ORANGE",
+      "GREEN"
+    ],
+    "reason": "team_eliminated"
   },
   "meta": {
-    "created": "2025-09-10T06:46:02.455365Z"
+    "created": "2025-09-11T02:55:35.932264Z"
   }
 }

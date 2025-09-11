@@ -28,7 +28,7 @@ DIRS = [(-1,0),(1,0),(0,-1),(0,1)]
 #                     g.deploy(player, pid, rc); break
 
 pid_to_value = {
-    PieceID.JUNQI: 500,
+    PieceID.JUNQI: 150,
     PieceID.SILING: 50,
     PieceID.JUNZHANG: 40,
     PieceID.SHIZHANG: 30,
@@ -42,17 +42,17 @@ pid_to_value = {
     PieceID.ZHADAN: 35,
 }
 
-def play_episode(net: PolicyNet, device: str,train_4player = True,no_grad_net = None):
-    traj = []  # (logp, player)
+def play_episode(net: PolicyNet, device: str,no_grad_net = None):
+    traj = []  # (logp, player, information)
     g = Game(GameConfig())
     
     # 创建四个玩家的Agent
     agents = {}
     for player in PLAYER_ORDER:
-        if player == Player.ORANGE or player == Player.GREEN or train_4player:
-            agents[player] = Agent(net=net, device=device)
+        if player == Player.ORANGE or player == Player.GREEN:
+            agents[player] = Agent(net=net, device=device,temperature=2)
         else:
-            agents[player] = Agent(device=device,net=no_grad_net)
+            agents[player] = Agent(device=device,net=no_grad_net,temperature=2)
         agents[player].reset()
     
     # 部署阶段
@@ -85,7 +85,7 @@ def play_episode(net: PolicyNet, device: str,train_4player = True,no_grad_net = 
         logp = torch.log(ps[src_idx] + 1e-9) + torch.log(pt[dst_idx] + 1e-9)
         
         ev = g.step(src, dst)
-        information = {'phase':'play','ev':ev}
+        information = {'phase':'play','ev':ev,'dst':dst}
         traj.append((logp, player, information))
         # print(ascii_board(g.state.board, viewer=player, reveal_all=True, is_deploy=False))
     
@@ -106,29 +106,31 @@ def play_episode(net: PolicyNet, device: str,train_4player = True,no_grad_net = 
         if g.state.winner is not None:
             if g.state.winning_team and player in g.state.winning_team:
                 if information['phase'] == 'play':
-                    reward_onestep['win_lose_draw'] += 100*index / len(traj)
+                    reward_onestep['win_lose_draw'] += 50*index / len(traj)
                 else:
                     reward_onestep['win_lose_draw'] += 10
             else:
                 if information['phase'] == 'play':
-                    reward_onestep['win_lose_draw'] -= 10*index / len(traj)
+                    reward_onestep['win_lose_draw'] -= 50*index / len(traj)
                 else:
-                    reward_onestep['win_lose_draw'] -= 1
+                    reward_onestep['win_lose_draw'] -= 10
         elif g.state.end_reason == 'draw':
             if information['phase'] == 'play':
-                reward_onestep['win_lose_draw'] -= 15*index / len(traj)
+                reward_onestep['win_lose_draw'] -= 10*index / len(traj)
             else:
-                reward_onestep['win_lose_draw'] -= 1
+                reward_onestep['win_lose_draw'] -= 2
         
         # 吃子相关奖励
         if information['phase'] == 'play' and information['ev']['type'] == 'capture':
-            if information['ev']['result'] == 'attacker':
+            # 同归于尽或杀入大本营
+            if information['ev']['result'] == 'both' or g.state.board.is_headquarters(information['dst']):
+                reward_onestep['attack_value'] += pid_to_value[information['ev']['q_pid']]
+                reward_onestep['attack_value'] -= 0.9*pid_to_value[information['ev']['p_pid']]            
+            elif information['ev']['result'] == 'attacker':
                 reward_onestep['attack_value'] += pid_to_value[information['ev']['q_pid']]
             elif information['ev']['result'] == 'defender':
-                reward_onestep['attack_value'] -= 0.1*pid_to_value[information['ev']['p_pid']]
-            elif information['ev']['result'] == 'both':
-                reward_onestep['attack_value'] += pid_to_value[information['ev']['q_pid']]
-                reward_onestep['attack_value'] -= 0.5*pid_to_value[information['ev']['p_pid']]
+                reward_onestep['attack_value'] -= 0.9*pid_to_value[information['ev']['p_pid']]
+
         list_dict_logp_rewards.append(reward_onestep)
 
     returns = []    # (logp, gain)
@@ -159,7 +161,7 @@ def play_episode(net: PolicyNet, device: str,train_4player = True,no_grad_net = 
         returns.append((logp, gain))
     return returns
 
-def train(epochs,episodes_per_epoch, out, from_ckpt=None,lr_step=1, lr_gamma=0.5,train_4player=True):
+def train(epochs,episodes_per_epoch, out, from_ckpt=None,lr_step=1, lr_gamma=0.5):
     device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     # device = 'cpu'
     print('device:',device)
@@ -175,17 +177,17 @@ def train(epochs,episodes_per_epoch, out, from_ckpt=None,lr_step=1, lr_gamma=0.5
             if i % 3 == 0:
                 print("使用随机模型作为训练对手")
             elif i % 3 == 1:
-                no_grad_net.load_state_dict(torch.load("checkpoints/01.pt"))
-                print("使用01.pt作为训练对手")
+                no_grad_net=net
+                print("自己作为训练对手")
             elif i % 3 == 2:
                 no_grad_net.load_state_dict(torch.load("checkpoints/02.pt"))
                 print("使用02.pt作为训练对手")
-            traj=play_episode(net=net, device=device,train_4player=args.train_4player,no_grad_net=no_grad_net)
+            traj=play_episode(net=net, device=device,no_grad_net=no_grad_net)
             if not traj: continue
-            loss=0.0
             for logp,R in traj:
                 # print('logp:',logp.item(),'R:',R)
                 loss=loss - logp*R
+        loss = loss / episodes_per_epoch
         opt.zero_grad(); loss.backward(); opt.step()
         scheduler.step()
             # print('loss:',loss.item())
@@ -196,10 +198,9 @@ def train(epochs,episodes_per_epoch, out, from_ckpt=None,lr_step=1, lr_gamma=0.5
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser()
-    ap.add_argument('--episodes_per_epoch', type=int, default=9)
     ap.add_argument('--epochs', type=int, default=10)
+    ap.add_argument('--episodes_per_epoch', type=int, default=3)
     ap.add_argument('--out', type=str, default='checkpoints/rl.pt')
     ap.add_argument('--from_ckpt',type=str,default=None)
-    ap.add_argument('--train_4player',action='store_true',default=True)
     args=ap.parse_args()
-    train(args.epochs,args.episodes_per_epoch, args.out,from_ckpt=args.from_ckpt,train_4player=args.train_4player)
+    train(args.epochs,args.episodes_per_epoch, args.out,from_ckpt=args.from_ckpt)

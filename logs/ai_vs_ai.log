@@ -1,0 +1,72 @@
+===== Script Content Start =====
+{
+echo "===== Script Content Start ====="
+cat "$0"
+echo ""
+echo "===== Script Content End ====="
+} > logs/ai_vs_ai.log
+
+
+nohup python -u scripts/ai_vs_ai.py \
+--count 10 \
+--ckpt_og_team checkpoints/04.pt \
+>> logs/ai_vs_ai.log 2>&1 & echo $! > ai_vs_ai_pid.log
+
+# --ckpt_pb_team checkpoints/03.pt \ 
+===== Script Content End =====
+部署完毕，开始对局。
+玩家 PURPLE 被淘汰
+玩家 BLUE 被淘汰
+橙色队伍获胜!!!
+对局结束： team_eliminated winner= 0 winning_team= (<Player.ORANGE: 0>, <Player.GREEN: 2>) 总步数: 391
+部署完毕，开始对局。
+玩家 BLUE 被淘汰
+对局结束： draw winner= None winning_team= None 总步数: 303
+部署完毕，开始对局。
+玩家 PURPLE 被淘汰
+对局结束： draw winner= None winning_team= None 总步数: 258
+部署完毕，开始对局。
+对局结束： draw winner= None winning_team= None 总步数: 241
+部署完毕，开始对局。
+玩家 BLUE 被淘汰
+对局结束： draw winner= None winning_team= None 总步数: 379
+部署完毕，开始对局。
+玩家 PURPLE 被淘汰
+对局结束： draw winner= None winning_team= None 总步数: 316
+部署完毕，开始对局。
+玩家 BLUE 被淘汰
+对局结束： draw winner= None winning_team= None 总步数: 426
+部署完毕，开始对局。
+玩家 BLUE 被淘汰
+玩家 PURPLE 被淘汰
+橙色队伍获胜!!!
+对局结束： team_eliminated winner= 0 winning_team= (<Player.ORANGE: 0>, <Player.GREEN: 2>) 总步数: 100
+部署完毕，开始对局。
+玩家 PURPLE 被淘汰
+玩家 BLUE 被淘汰
+橙色队伍获胜!!!
+对局结束： team_eliminated winner= 0 winning_team= (<Player.ORANGE: 0>, <Player.GREEN: 2>) 总步数: 125
+部署完毕，开始对局。
+玩家 BLUE 被淘汰
+玩家 PURPLE 因无棋可走被淘汰
+玩家 PURPLE 被淘汰
+橙色队伍获胜!!!
+对局结束： team_eliminated winner= 0 winning_team= (<Player.ORANGE: 0>, <Player.GREEN: 2>) 总步数: 247
+===========
+
+橙绿队伍获胜场次: 4
+紫蓝队伍获胜场次: 0
+平局场次: 6
+场均总步数: 278.6
+ORANGE 场均主动吃子次数: 16.6
+ORANGE 场均吃子成功: 9.3
+ORANGE 场均送子次数: 4.0
+PURPLE 场均主动吃子次数: 3.9
+PURPLE 场均吃子成功: 0.7
+PURPLE 场均送子次数: 2.6
+GREEN 场均主动吃子次数: 16.7
+GREEN 场均吃子成功: 7.3
+GREEN 场均送子次数: 5.9
+BLUE 场均主动吃子次数: 2.9
+BLUE 场均吃子成功: 0.9
+BLUE 场均送子次数: 1.5

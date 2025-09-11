@@ -107,7 +107,7 @@ import numpy as np
 from collections import deque
 
 try:
-    from ..constants import BOARD_H, BOARD_W, Player, PieceID, SpecialArea, TEAMMATES
+    from ..constants import BOARD_H, BOARD_W, Player, PieceID, SpecialArea, TEAMMATES,PLAYER_ORDER
 except Exception:
     class Player:
         ORANGE = 0
@@ -178,10 +178,14 @@ def encode_board_planes(board: Board, viewer: Player, reveal_all: bool=False, is
                 else:
                     # 未知敌方棋子
                     if obs[r][c] == int(PieceID.UNKNOWN_ENEMY):
-                        # 根据位置判断是上家还是下家（简化处理）
-                        if r < H // 2:  # 上半部分认为是上家
+                        # 得到当前玩家在PLAYER_ORDER中的索引
+                        current_player_index = PLAYER_ORDER.index(viewer)
+                        # 得到上家和下家
+                        upper_player = PLAYER_ORDER[current_player_index - 1]
+                        lower_player = PLAYER_ORDER[current_player_index + 1]
+                        if p.owner == upper_player:  # 
                             x[24, r, c] = 1.0
-                        else:  # 下半部分认为是下家
+                        elif p.owner == lower_player:  # 
                             x[25, r, c] = 1.0
                     else:
                         x[26, r, c] = 1.0  # 无棋子
