@@ -9,49 +9,68 @@ echo "===== Script Content End ====="
 
 nohup python -u scripts/ai_vs_ai.py \
 --count 10 \
---ckpt_og_team checkpoints/06.pt \
+--ckpt_og_team checkpoints/02_new.pt \
 --ckpt_pb_team checkpoints/01_new.pt \
 >> logs/ai_vs_ai.log 2>&1 & echo $! >> pid.log
 
 
 ===== Script Content End =====
 部署完毕，开始对局。
-对局结束： draw winner= None winning_team= None 总步数: 281
-部署完毕，开始对局。
-玩家 BLUE 因无棋可走被淘汰
+玩家 PURPLE 被淘汰
+玩家 GREEN 被淘汰
 玩家 BLUE 被淘汰
-对局结束： draw winner= None winning_team= None 总步数: 372
+橙色队伍获胜!!!
+对局结束： team_eliminated winner= 0 winning_team= (<Player.ORANGE: 0>, <Player.GREEN: 2>) 总步数: 77
 部署完毕，开始对局。
-对局结束： draw winner= None winning_team= None 总步数: 255
+对局结束： draw winner= None winning_team= None 总步数: 137
 部署完毕，开始对局。
-对局结束： draw winner= None winning_team= None 总步数: 330
+玩家 BLUE 被淘汰
+对局结束： draw winner= None winning_team= None 总步数: 211
 部署完毕，开始对局。
-对局结束： draw winner= None winning_team= None 总步数: 248
+玩家 BLUE 被淘汰
+玩家 PURPLE 被淘汰
+橙色队伍获胜!!!
+对局结束： team_eliminated winner= 0 winning_team= (<Player.ORANGE: 0>, <Player.GREEN: 2>) 总步数: 73
 部署完毕，开始对局。
-对局结束： draw winner= None winning_team= None 总步数: 164
+玩家 PURPLE 被淘汰
+玩家 BLUE 被淘汰
+橙色队伍获胜!!!
+对局结束： team_eliminated winner= 0 winning_team= (<Player.ORANGE: 0>, <Player.GREEN: 2>) 总步数: 105
 部署完毕，开始对局。
-对局结束： draw winner= None winning_team= None 总步数: 369
+玩家 GREEN 被淘汰
+玩家 BLUE 被淘汰
+对局结束： draw winner= None winning_team= None 总步数: 72
 部署完毕，开始对局。
-对局结束： draw winner= None winning_team= None 总步数: 244
+玩家 GREEN 被淘汰
+玩家 BLUE 被淘汰
+对局结束： draw winner= None winning_team= None 总步数: 288
 部署完毕，开始对局。
-对局结束： draw winner= None winning_team= None 总步数: 141
+玩家 PURPLE 被淘汰
+对局结束： draw winner= None winning_team= None 总步数: 183
 部署完毕，开始对局。
-对局结束： draw winner= None winning_team= None 总步数: 172
+玩家 PURPLE 被淘汰
+玩家 BLUE 被淘汰
+橙色队伍获胜!!!
+对局结束： team_eliminated winner= 0 winning_team= (<Player.ORANGE: 0>, <Player.GREEN: 2>) 总步数: 40
+部署完毕，开始对局。
+玩家 GREEN 被淘汰
+玩家 BLUE 被淘汰
+对局结束： draw winner= None winning_team= None 总步数: 114
 ===========
 
-橙绿队伍获胜场次: 0
+橙绿队伍获胜场次: 4
 紫蓝队伍获胜场次: 0
-平局场次: 10
-场均总步数: 257.6
-ORANGE 场均主动吃子次数: 8.6
-ORANGE 场均吃子成功: 5.4
-ORANGE 场均送子次数: 2.0
-PURPLE 场均主动吃子次数: 6.1
-PURPLE 场均吃子成功: 2.7
-PURPLE 场均送子次数: 1.9
-GREEN 场均主动吃子次数: 7.6
-GREEN 场均吃子成功: 5.0
-GREEN 场均送子次数: 1.9
-BLUE 场均主动吃子次数: 7.4
-BLUE 场均吃子成功: 2.7
-BLUE 场均送子次数: 3.4
+平局场次: 6
+场均总步数: 130.0
+ORANGE 场均主动吃子次数: 8.7
+ORANGE 场均吃子成功: 6.1
+ORANGE 场均送子次数: 1.5
+PURPLE 场均主动吃子次数: 6.4
+PURPLE 场均吃子成功: 3.7
+PURPLE 场均送子次数: 1.6
+GREEN 场均主动吃子次数: 6.4
+GREEN 场均吃子成功: 4.5
+GREEN 场均送子次数: 0.8
+BLUE 场均主动吃子次数: 7.2
+BLUE 场均吃子成功: 4.5
+BLUE 场均送子次数: 1.4

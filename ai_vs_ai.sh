@@ -8,7 +8,7 @@ echo "===== Script Content End ====="
 
 nohup python -u scripts/ai_vs_ai.py \
 --count 10 \
---ckpt_og_team checkpoints/06.pt \
+--ckpt_og_team checkpoints/02_new.pt \
 --ckpt_pb_team checkpoints/01_new.pt \
 >> logs/ai_vs_ai.log 2>&1 & echo $! >> pid.log
 

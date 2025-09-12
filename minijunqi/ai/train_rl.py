@@ -173,25 +173,19 @@ def play_episode(net: PolicyNet, device: str,no_grad_net = None):
     for logp_reward in list_dict_logp_rewards[::-1]:
         logp = logp_reward['logp']
         gain = logp_reward['win_lose_draw']
-        gain += logp_reward['attack_value']
+
+        temp_capture_backward[logp_reward['player']] += logp_reward['attack_value']
+        the_teammate = TEAMMATES[logp_reward['player']]
+        the_nextplayer = PLAYER_ORDER[(PLAYER_ORDER.index(logp_reward['player'])+1)%4]
+        the_previousplayer = PLAYER_ORDER[(PLAYER_ORDER.index(logp_reward['player'])-1)%4]
+        gain += temp_capture_backward[logp_reward['player']]
+        gain += temp_capture_backward[the_teammate]
+        gain -= temp_capture_backward[the_nextplayer]
+        gain -= temp_capture_backward[the_previousplayer]      
         if logp_reward['phase'] == 'play':
-            the_teammate = TEAMMATES[logp_reward['player']]
-            the_nextplayer = PLAYER_ORDER[(PLAYER_ORDER.index(logp_reward['player'])+1)%4]
-            the_previousplayer = PLAYER_ORDER[(PLAYER_ORDER.index(logp_reward['player'])-1)%4]
-            gain += 0.7*temp_capture_backward[logp_reward['player']]
-            gain += 0.3*temp_capture_backward[the_teammate]
-            gain -= 0.4*temp_capture_backward[the_nextplayer]
-            gain -= 0.2*temp_capture_backward[the_previousplayer]
-            temp_capture_backward[logp_reward['player']] += logp_reward['attack_value']
-            temp_capture_backward[logp_reward['player']] *= 0.7
-        else:
-            the_teammate = TEAMMATES[logp_reward['player']]
-            the_nextplayer = PLAYER_ORDER[(PLAYER_ORDER.index(logp_reward['player'])+1)%4]
-            the_previousplayer = PLAYER_ORDER[(PLAYER_ORDER.index(logp_reward['player'])-1)%4]
-            gain += 0.7*temp_capture_backward[logp_reward['player']]
-            gain += 0.3*temp_capture_backward[the_teammate]
-            gain -= 0.4*temp_capture_backward[the_nextplayer]
-            gain -= 0.2*temp_capture_backward[the_previousplayer]
+            for theplayer in temp_capture_backward.keys():
+                temp_capture_backward[theplayer] *= 0.8
+                
         returns.append((logp, gain))
     return returns
 
@@ -202,7 +196,7 @@ def train(epochs,episodes_per_epoch, out, from_ckpt=None,lr_step=2, lr_gamma=0.8
     net = PolicyNet().to(device)
     if from_ckpt :
         net.load_state_dict(torch.load(from_ckpt)) 
-    opt=optim.Adam(net.parameters(), lr=4e-2)
+    opt=optim.Adam(net.parameters(), lr=2e-2)
     scheduler = optim.lr_scheduler.StepLR(opt, step_size=lr_step, gamma=lr_gamma)
     for epoch in range(epochs):
         start_time = time.time()
@@ -210,12 +204,18 @@ def train(epochs,episodes_per_epoch, out, from_ckpt=None,lr_step=2, lr_gamma=0.8
         loss = 0.0
         for i in trange(episodes_per_epoch):
             no_grad_net = PolicyNet().to(device)
-            if False:
-                no_grad_net.load_state_dict(torch.load("checkpoints/04.pt"))
+            if i % 3 == 0:
+                no_grad_net=net
+                print("\n使用当前网络作为训练对手，四个agent均累计梯度")
+            elif i % 3 == 1:
+                no_grad_net.load_state_dict(torch.load("checkpoints/01_new.pt"))
+                print("\n使用01_new.pt作为训练对手")
+            elif i % 2 == 0:
+                no_grad_net.load_state_dict(torch.load("checkpoints/06.pt"))
                 print("\n使用06.pt作为训练对手")
             else:
-                no_grad_net=net
-                print("\n自己作为训练对手（四个agent均累计梯度）")
+                no_grad_net.load_state_dict(torch.load("checkpoints/04.pt"))
+                print("\n使用04.pt作为训练对手")
             traj=play_episode(net=net, device=device,no_grad_net=no_grad_net)
             if not traj: continue
             for logp,R in traj:
