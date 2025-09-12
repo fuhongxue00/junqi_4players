@@ -90,6 +90,14 @@ def main():
             player = game.state.turn
             agent = agents[player]
             src, dst, _, _ = agent.select_move(game, player)
+            # 对每一个非当前玩家的玩家，进行stack_history
+            for other_player in PLAYER_ORDER:
+                if other_player != player:
+                    __ = agent.policy._encode_obs(board=game.state.board, 
+                                             viewer=other_player, 
+                                             side_to_move=other_player,
+                                             no_battle_ratio=game.state.no_battle_counter/game.cfg.no_battle_draw_steps, 
+                                             is_deploy=False)
             ev = game.step(src, dst)
             
             # 统计攻击信息

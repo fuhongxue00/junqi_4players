@@ -273,7 +273,7 @@ class Board:
         if q is None:
             self.set_piece(player, dst, p)
             self.set_piece(player, src, None)
-            return {'ok': True, 'type': 'move', 'flag_captured': False}
+            return {'ok': True, 'type': 'move', 'flag_captured': False,'p_owner':p.owner,'p_pid':p.pid}
         
         outcome = self.compare(p, q)
         flag_captured = (q.pid == PieceID.JUNQI)

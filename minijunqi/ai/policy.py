@@ -1,103 +1,3 @@
-
-# # -*- coding: utf-8 -*-
-# from __future__ import annotations
-# from typing import Tuple, Dict
-# import torch
-# import torch.nn.functional as F
-# import numpy as np
-# from ..constants import BOARD_H, BOARD_W, Player
-# from ..board import Board
-# from .net import TinyUNet
-
-# DIRS = [(-1,0),(1,0),(0,-1),(0,1)]
-
-# def encode_obs(board: Board, viewer: Player, side_to_move: Player, no_battle_counter: int, no_battle_limit: int, reveal_all: bool=False, is_deploy: bool=False) -> torch.Tensor:
-#     """返回 (C,H,W) 张量。通道：10个ID、side_to_move、no_battle_ratio、is_deploy。"""
-#     from ..constants import PieceID
-#     obs = board.observe(viewer, reveal_all=reveal_all, hide_enemy_positions=is_deploy and not reveal_all)
-#     H, W = BOARD_H, BOARD_W
-#     C = 13
-#     x = np.zeros((C, H, W), dtype=np.float32)
-#     for r in range(H):
-#         for c in range(W):
-#             vid = obs[r][c]
-#             if 0 <= vid <= 9:
-#                 x[vid, r, c] = 1.0
-#     x[10,:,:] = 1.0 if side_to_move == viewer else 0.0
-#     x[11,:,:] = float(no_battle_counter) / max(1,no_battle_limit)
-#     x[12,:,:] = 1.0 if is_deploy else 0.0
-#     return torch.from_numpy(x)
-
-# def masked_softmax(logits: torch.Tensor, mask: torch.Tensor, dim: int) -> torch.Tensor:
-#     logits = logits.clone()
-#     logits[mask==0] = -1e9
-#     return F.softmax(logits, dim=dim)
-
-# class SharedPolicy:
-#     def __init__(self, device='cpu'):
-#         self.net = TinyUNet().to(device)
-#         self.device = device
-#         self.net.eval()
-#     def load(self, path: str): self.net.load_state_dict(torch.load(path, map_location=self.device))
-#     def save(self, path: str): torch.save(self.net.state_dict(), path)
-
-#     # 部署策略：固定顺序给定棋子，只预测落点
-#     def select_deploy(self, board: Board, viewer: Player, piece_to_place, no_battle_counter: int, no_battle_limit: int, temperature: float=1.0):
-#         with torch.no_grad():
-#             x = encode_obs(board, viewer, side_to_move=viewer, no_battle_counter=no_battle_counter, no_battle_limit=no_battle_limit, is_deploy=True).unsqueeze(0).to(self.device)
-#             out = self.net(x)
-#         cell_mask = torch.zeros((BOARD_H*BOARD_W,), dtype=torch.float32, device=self.device)
-#         for r in range(BOARD_H):
-#             for c in range(BOARD_W):
-#                 ok = board.can_place(viewer, piece_to_place, (r,c))
-#                 cell_mask[r*BOARD_W+c] = 1.0 if ok else 0.0
-#         lc = out['deploy_cell_logits'].squeeze(0) / max(1e-6, temperature)
-#         pc = masked_softmax(lc, cell_mask, dim=0).cpu().numpy()
-#         if pc.sum() <= 0:
-#             print('policy.py出现softmax后的负值')
-#             for idx in range(BOARD_H*BOARD_W):
-#                 if cell_mask[idx] > 0:
-#                     return divmod(idx, BOARD_W)
-#             return (0,0)
-#         idx = np.random.choice(BOARD_H*BOARD_W, p=pc)
-#         return divmod(idx, BOARD_W)
-
-#     # 行动策略：选子 + 方向
-#     def select_move(self, board: Board, viewer: Player, side_to_move: Player, no_battle_counter: int, no_battle_limit: int, temperature: float=1.0):
-#         with torch.no_grad():
-#             x = encode_obs(board, viewer, side_to_move=side_to_move, no_battle_counter=no_battle_counter, no_battle_limit=no_battle_limit, is_deploy=False).unsqueeze(0).to(self.device)
-#             out = self.net(x)
-#         select_mask = torch.zeros((BOARD_H*BOARD_W,), dtype=torch.float32, device=self.device)
-#         for r in range(BOARD_H):
-#             for c in range(BOARD_W):
-#                 p = board.get((r,c))
-#                 if p is None or p.owner != viewer or not p.can_move(): continue
-#                 for dr,dc in DIRS:
-#                     rr,cc=r+dr,c+dc
-#                     if 0<=rr<BOARD_H and 0<=cc<BOARD_W:
-#                         q=board.get((rr,cc))
-#                         if q is None or q.owner != viewer:
-#                             select_mask[r*BOARD_W+c]=1.0; break
-#         ls = out['select_piece_logits'].squeeze(0) / max(1e-6, temperature)
-#         ps = masked_softmax(ls, select_mask, dim=0).cpu().numpy()
-#         if ps.sum() <= 0: return (0,0),(0,0)
-#         idx = np.random.choice(BOARD_H*BOARD_W, p=ps)
-#         r, c = divmod(idx, BOARD_W)
-#         dir_mask = torch.zeros((4,), dtype=torch.float32, device=self.device)
-#         for k,(dr,dc) in enumerate(DIRS):
-#             rr,cc=r+dr,c+dc
-#             if 0<=rr<BOARD_H and 0<=cc<BOARD_W:
-#                 q=board.get((rr,cc))
-#                 if q is None or q.owner != viewer:
-#                     dir_mask[k]=1.0
-#         ld = out['move_dir_logits'].squeeze(0) / max(1e-6, temperature)
-#         pd = masked_softmax(ld, dir_mask, dim=0).cpu().numpy()
-#         if pd.sum() <= 0: return (r,c),(r,c)
-#         k = np.random.choice(4, p=pd)
-#         dr,dc=DIRS[k]
-#         return (r,c),(r+dr,c+dc)
-
-
 # -*- coding: utf-8 -*-
 from __future__ import annotations
 from typing import Tuple, Dict, Deque
@@ -118,7 +18,8 @@ except Exception:
 
 try:
     from ..board import Board
-except Exception:
+except Exception as e:
+    print(f"board异常: {e}") 
     Board = object
 
 from .net import PolicyNet, HISTORY_STEPS, PIECE_PLANES_PER_FRAME, STATE_EXTRA_C, SPECIAL_AREA_C, RESERVED_EXTRA_C
@@ -130,19 +31,6 @@ def masked_softmax(logits: torch.Tensor, mask: torch.Tensor, dim: int) -> torch.
     logits = logits.clone()
     logits[mask==0] = float('-inf')
     return F.softmax(logits, dim=dim)
-
-def rotate_hw(x_hw: torch.Tensor) -> torch.Tensor:
-    """Rotate HxW (or BxHxW) tensor by 180 degrees."""
-    if x_hw.ndim == 2:
-        return torch.flip(x_hw, dims=(0,1))
-    elif x_hw.ndim == 3:
-        return torch.flip(x_hw, dims=(1,2))
-    else:
-        raise ValueError('rotate_hw expects 2D or 3D tensor')
-
-def rotate_chw(x_chw: torch.Tensor) -> torch.Tensor:
-    """Rotate CxHxW tensor by 180 degrees."""
-    return torch.flip(x_chw, dims=(1,2))
 
 def encode_board_planes(board: Board, viewer: Player, reveal_all: bool=False, is_deploy: bool=False) -> torch.Tensor:
     """Return (30,H,W) one-hot planes for four-country chess."""
@@ -170,27 +58,31 @@ def encode_board_planes(board: Board, viewer: Player, reveal_all: bool=False, is
                     piece_idx = int(p.pid) - 1  # PieceID从1开始，数组从0开始
                     if 0 <= piece_idx < 12:
                         x[piece_idx, r, c] = 1.0
+                    else:
+                        print(f"policy异常piece_idx: {piece_idx}")
                 elif p.owner == TEAMMATES.get(viewer):
                     # 队友棋子
                     piece_idx = int(p.pid) - 1 + 12  # 队友通道12-23
                     if 12 <= piece_idx < 24:
                         x[piece_idx, r, c] = 1.0
+                    else:
+                        print(f"队友policy异常piece_idx: {piece_idx}")
                 else:
                     # 未知敌方棋子
                     if obs[r][c] == int(PieceID.UNKNOWN_ENEMY):
                         # 得到当前玩家在PLAYER_ORDER中的索引
                         current_player_index = PLAYER_ORDER.index(viewer)
                         # 得到上家和下家
-                        upper_player = PLAYER_ORDER[current_player_index - 1]
-                        lower_player = PLAYER_ORDER[current_player_index + 1]
+                        upper_player = PLAYER_ORDER[(current_player_index - 1) % len(PLAYER_ORDER)]
+                        lower_player = PLAYER_ORDER[(current_player_index + 1) % len(PLAYER_ORDER)]
                         if p.owner == upper_player:  # 
                             x[24, r, c] = 1.0
                         elif p.owner == lower_player:  # 
                             x[25, r, c] = 1.0
                     else:
                         x[26, r, c] = 1.0  # 无棋子
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"encode_board_planes异常: {e}") 
     
     return torch.from_numpy(x)  # (30,H,W)
 
@@ -255,8 +147,8 @@ class SharedPolicy:
                         special_areas[1, r, c] = 1.0
                     elif area == SpecialArea.FORBIDDEN:
                         special_areas[2, r, c] = 1.0
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"encode_board_planes异常: {e}") 
         
         # 预留通道
         reserved = torch.zeros((RESERVED_EXTRA_C, H, W), dtype=torch.float32)
@@ -277,7 +169,8 @@ class SharedPolicy:
                     # if ok:
                         # print(f"can_place: viewer={viewer}, piece_to_place={piece_to_place}, (r, c)={(r, c)}")
                     cell_mask[r*BOARD_W+c] = 1.0 if ok else 0.0
-        except Exception:
+        except Exception as e  :
+            print(f"select_deploy异常: {e}") 
             cell_mask[:] = 1.0
         
         lc = out['deploy_cell_logits'].squeeze(0) / max(1e-6, temperature)
@@ -310,7 +203,8 @@ class SharedPolicy:
                             if board.can_move_from_to(viewer, (r, c), (rr, cc)):
                                 select_mask[r, c] = 1.0
                                 break
-        except Exception:
+        except Exception as e:
+            print(f"select_move异常: {e}") 
             select_mask[:] = 1.0
         
         ls = out1['select_piece_logits'].squeeze(0) / max(1e-6, temperature)
@@ -341,7 +235,8 @@ class SharedPolicy:
                     if board.can_move_from_to(viewer, src, (rr, cc)):
                         target_mask[rr, cc] = 1.0
 
-        except Exception:
+        except Exception as e:
+            print(f"select_move异常: {e}") 
             target_mask[:] = 1.0
         
         lt = out2['target_cell_logits'].squeeze(0) / max(1e-6, temperature)
